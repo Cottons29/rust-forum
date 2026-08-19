@@ -19,7 +19,6 @@ use aimer::*;
 // this is the entry point of the app
 #[aimer::main]
 fn main() {
-    // simply start the app with AimerApp::start
 
     AimerApp::new()
         .window(
