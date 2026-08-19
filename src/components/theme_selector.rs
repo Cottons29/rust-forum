@@ -1,0 +1,97 @@
+use std::time::Duration;
+
+use crate::store::AppStore;
+use crate::theme::ForumTheme;
+use aimer::animation::{Curve, ImplicitAnimatedBuilder};
+use aimer::style::{
+    BorderSlice, BorderStyle, BoxBorder, BoxDecoration, LayoutSpacing, TextAlign, TextStyle, Theme,
+    ThemeMode,
+};
+use aimer::{
+    AnyWidget, BuildContext, Button, Color, Container, Dimension, FontWeight, ProviderContext,
+    ProviderHandle, Row, StatelessWidget, Text, Widget,
+};
+
+const BUTTON_WIDTH: f32 = 96.0;
+const BUTTON_HEIGHT: f32 = 40.0;
+const TRANSITION_DURATION: Duration = Duration::from_millis(240);
+
+/// A row of three theme-mode buttons — `Light`, `Dark`, and `System`. The
+/// active mode uses the accent colour; the others use the card decoration.
+#[derive(Clone, StatelessWidget)]
+pub struct ThemeSelector;
+
+impl StatelessWidget for ThemeSelector {
+    fn build(&self, ctx: &BuildContext) -> impl Widget {
+        let theme = *ForumTheme::of(ctx);
+        let store = ProviderHandle::<AppStore>::of(ctx);
+        let mode = ctx.select::<AppStore, ThemeMode>(|s| s.theme_mode);
+
+        Row::new().gaps(LayoutSpacing::all(8)).children([
+            theme_button("Light", ThemeMode::Light, mode, theme, store.clone()),
+            theme_button("Dark", ThemeMode::Dark, mode, theme, store.clone()),
+            theme_button("System", ThemeMode::System, mode, theme, store),
+        ])
+    }
+}
+
+/// One animated theme-mode button.
+fn theme_button(
+    label: &'static str,
+    this_mode: ThemeMode,
+    current: ThemeMode,
+    theme: ForumTheme,
+    store: ProviderHandle<AppStore>,
+) -> AnyWidget {
+    let active = current == this_mode;
+
+    let active_bg = theme.primary_color();
+    let inactive_bg = theme.surface_color();
+    let active_fg = theme.on_primary_color();
+    let inactive_fg = theme.on_surface_color();
+    let inactive_border = theme.primary_color().darken(0.4).with_alpha(0.1);
+    let active_border = Color::Transparent;
+
+    Button::new()
+        .on_press(move || store.update(move |s| s.set_theme_mode(this_mode)))
+        .child(
+            ImplicitAnimatedBuilder::new(
+                if active { 1.0 } else { 0.0 },
+                TRANSITION_DURATION,
+                Curve::FastOutSlowIn,
+                move |progress| {
+                    let progress = *progress;
+                    let bg = inactive_bg.lerp(active_bg, progress);
+                    let fg = inactive_fg.lerp(active_fg, progress);
+                    let border = inactive_border.lerp(active_border, progress);
+
+                    Container::new()
+                        .width(Dimension::Px(BUTTON_WIDTH))
+                        .height(Dimension::Px(BUTTON_HEIGHT))
+                        .box_decoration(
+                            BoxDecoration::new()
+                                .background_color(bg)
+                                .border_radius(8)
+                                .border(BoxBorder::all(
+                                    BorderSlice::new()
+                                        .style(BorderStyle::Dotted)
+                                        .stroke(2)
+                                        .color(border),
+                                )),
+                        )
+                        .child(
+                            Text::new(label)
+                                .text_align(TextAlign::MidCenter)
+                                .text_style(
+                                    TextStyle::new()
+                                        .font_size(16)
+                                        .font_weight(FontWeight::Bold)
+                                        .color(fg),
+                                ),
+                        )
+                },
+            )
+            .key(format!("theme-button-{label}")),
+        )
+        .boxed()
+}

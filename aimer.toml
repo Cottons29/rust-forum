@@ -1,0 +1,14 @@
+[package]
+name = "RustForum"
+version = "0.1.0"
+description = "An simple cloned of RustForum"
+author = ""
+group = "dev.aimers.rustforum"
+
+
+[assets]
+files = [
+    "assets/app-apps-applications-tiles-svgrepo-com(1).svg",
+    "assets/clock-two-thirty-svgrepo-com.svg",
+    "assets/hot-svgrepo-com.svg"
+]

@@ -1,0 +1,30 @@
+<p>before i decide to making it i went shopping on <a href="http://crates.io" rel="noopener nofollow ugc">crates.io</a>
+    first, here is my feeling:</p><p><strong>egui</strong>: easy to write, no architecture to fight, just call and draw.
+    but i have issue with the state management.<br><strong>iced</strong>: i am really not good with Elm's
+    style.<br><strong>gpui</strong>: in the last two years, it has less documents, i need to find the example at the
+    Zed's source code.<br><strong>dioxus</strong>: it's cross platform and declarative ui style but with macro, also i
+    have to "fighting" wtih my IDE when i missing one '}'.<br><strong>slint</strong>: i need to learn another DSL for
+    writting the UI, but their hot-reload is really nice.</p><p>My development is started when i found
+    <code>skia-safe</code> at <a href="http://crates.io" rel="noopener nofollow ugc">crates.io</a>, but later on i meet
+    the problem with cross-platform compilation, so i decide to write my own render engine using wgpu.</p><p>After
+    almost one year of development, i have get the benefit from the Rust's trait and type system, my ui can be declare
+    with builder pattern like this:</p>
+<pre data-code-wrap="rust"><code class="lang-rust">fn main() {  AimerApp::start(     Container::new()        .child(           Text::new("Hello World!")             .text_align(TextAlign::MidCenter)             .text_style(TextStyle::new().color(Color::BLACK)),      ),   )}</code></pre>
+<p>I really satisfy with building pattern, i have using it to build my first website into WebAssembly and rendering
+    inside the H5Canvas powered by WebGPU or WebGL.</p><p>here is my website <a href="https://aimers.dev"
+                                                                                rel="noopener nofollow ugc">aimers.dev</a>
+</p>
+<aside class="onebox githubrepo" data-onebox-src="https://github.com/Cottons29/aimer">
+    <header class="source"><a href="https://github.com/Cottons29/aimer" target="_blank" rel="noopener nofollow ugc">github.com</a>
+    </header>
+    <article class="onebox-body">
+        <div class="github-row" data-github-private-repo="false"><img width="690" height="344"
+                                                                      src="https://opengraph.githubassets.com/485bf7c2ae81855fd5009a8d33858cfb/Cottons29/aimer"
+                                                                      class="thumbnail">
+            <h3><a href="https://github.com/Cottons29/aimer" target="_blank" rel="noopener nofollow ugc">GitHub -
+                Cottons29/aimer: A rust-implemented cross-platform app framework</a></h3>
+            <p><span class="github-repo-description">A rust-implemented cross-platform app framework</span></p></div>
+    </article>
+    <div class="onebox-metadata"></div>
+    <div style="clear: both"></div>
+</aside>

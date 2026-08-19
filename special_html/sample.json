@@ -1,0 +1,3561 @@
+{
+  "post_stream": {
+    "posts": [
+      {
+        "id": 165427,
+        "name": "",
+        "username": "chrisd",
+        "avatar_template": "/user_avatar/users.rust-lang.org/chrisd/{size}/11859_2.png",
+        "created_at": "2020-05-07T15:05:15.788Z",
+        "cooked": "\u003cp\u003eTo format code in this forum you need to surround the code with three backticks (\u003ccode\u003e```\u003c/code\u003e). For example, typing this...\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e```\nfn main() {\n    println!()\n}\n```\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e...will be rendered as highlighted Rust code, like so:\u003c/p\u003e\n\u003cpre data-code-wrap=\"rust\"\u003e\u003ccode class=\"lang-rust\"\u003efn main() {\n    println!()\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eYou can also tell the forum software which language you're using by adding the language after the opening backticks.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e```cpp\n#include \u0026lt;iostream\u0026gt;\nint main() {\n  std::cout \u0026lt;\u0026lt; \"Hello World!\";\n}\n```\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWill appear with highlighting as:\u003c/p\u003e\n\u003cpre data-code-wrap=\"cpp\"\u003e\u003ccode class=\"lang-cpp\"\u003e#include \u0026lt;iostream\u0026gt;\nint main() {\n  std::cout \u0026lt;\u0026lt; \"Hello World!\";\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThe currently supported languages include: \u003ccode\u003eapache\u003c/code\u003e, \u003ccode\u003ebash\u003c/code\u003e, \u003ccode\u003ecs\u003c/code\u003e, \u003ccode\u003ecpp\u003c/code\u003e, \u003ccode\u003ecss\u003c/code\u003e, \u003ccode\u003ecoffeescript\u003c/code\u003e, \u003ccode\u003ediff\u003c/code\u003e, \u003ccode\u003exml\u003c/code\u003e, \u003ccode\u003ehttp\u003c/code\u003e, \u003ccode\u003eini\u003c/code\u003e, \u003ccode\u003ejson\u003c/code\u003e, \u003ccode\u003ejava\u003c/code\u003e, \u003ccode\u003ejavascript\u003c/code\u003e, \u003ccode\u003emakefile\u003c/code\u003e, \u003ccode\u003emarkdown\u003c/code\u003e, \u003ccode\u003enginx\u003c/code\u003e, \u003ccode\u003eobjectivec\u003c/code\u003e, \u003ccode\u003eruby\u003c/code\u003e, \u003ccode\u003eperl\u003c/code\u003e, \u003ccode\u003ephp\u003c/code\u003e, \u003ccode\u003epython\u003c/code\u003e, \u003ccode\u003esql\u003c/code\u003e, \u003ccode\u003ehandlebars\u003c/code\u003e, \u003ccode\u003erust\u003c/code\u003e and \u003ccode\u003edust\u003c/code\u003e. Others may be added in the future.\u003c/p\u003e\n\u003cp\u003eIt's also possible to add plain text by using \u003ccode\u003etext\u003c/code\u003e as the language:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"lang-plaintext\"\u003e```text\nError 365: Invalid command.\nSee help for a list of valid commands.\n```\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThis will be rendered without any highlighting:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"lang-plaintext\"\u003eError 365: Invalid command.\nSee help for a list of valid commands.\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eIf your keyboard layout does not have the \u003ckbd\u003e`\u003c/kbd\u003e key, you can also use a \u003ckbd\u003e~\u003c/kbd\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e~~~\nfn main() {\n    println!()\n}\n~~~\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e...will be rendered as highlighted Rust code, like so:\u003c/p\u003e\n\u003cpre data-code-wrap=\"rust\"\u003e\u003ccode class=\"lang-rust\"\u003efn main() {\n    println!()\n}\n\u003c/code\u003e\u003c/pre\u003e",
+        "post_number": 1,
+        "post_type": 1,
+        "posts_count": 4,
+        "updated_at": "2023-12-28T02:31:13.075Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 2417,
+        "reads": 4321,
+        "readers_count": 4320,
+        "score": 14243.2,
+        "yours": false,
+        "topic_id": 42214,
+        "topic_slug": "forum-code-formatting-and-syntax-highlighting",
+        "display_username": "",
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_bg_color": null,
+        "flair_color": null,
+        "flair_group_id": null,
+        "badges_granted": [],
+        "version": 6,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://users.rust-lang.org/t/remove-an-element-from-the-vector/43107/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Remove an element from the vector",
+            "clicks": 78
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-print-value-of-a-pointer/46352/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to print value of a pointer",
+            "clicks": 27
+          },
+          {
+            "url": "https://users.rust-lang.org/t/error-in-format/45815/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Error in Format!",
+            "clicks": 20
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-with-multithreading-x-y-axis-manipulation/44021/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Help with multithreading - x/y axis manipulation",
+            "clicks": 18
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-parse-reqwest-response-json-to-a-struct/46373/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to parse reqwest::blocking::response json to a struct",
+            "clicks": 15
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-call-a-raw-function-pointer-as-a-struct-member-wrapped-by-option/59310/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to call a raw function pointer as a struct member wrapped by option",
+            "clicks": 2
+          },
+          {
+            "url": "https://users.rust-lang.org/t/i-want-to-break-out-of-loop-when-0-occurs-4-times-or-1-occurs-3-times-baseball-balls-and-strikes/70060/2",
+            "internal": true,
+            "reflection": true,
+            "title": "I want to break out of loop when 0 occurs 4 times or 1 occurs 3 times (baseball balls and strikes)",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/python-to-rust-code-converter/47801/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Python to Rust Code converter",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/std-from-mime-mime-is-implemented-for-mut-str-but-not-for-str/44271/3",
+            "internal": true,
+            "reflection": true,
+            "title": "`std::convert::From\u003cmime::Mime\u003e` is implemented for `\u0026mut str`, but not for `\u0026str`",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-piece-of-code-it-doesnt-work-for-me/89474/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Help piece of code?, it doesn't work for me",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-can-i-improve-this-code/122869/3",
+            "internal": true,
+            "reflection": true,
+            "title": "How can I improve this code?",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/why-am-i-not-allowed-to-copy-part-of-a-list-filled-with-i32-to-another-variable/44887/10",
+            "internal": true,
+            "reflection": true,
+            "title": "Why am I not allowed to copy part of a list filled with i32 to another variable?",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/pass-function-closure-to-thread/45574/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Pass function closure to thread",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/confusion-as-a-new-rustacean/43499/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Confusion as a new rustacean",
+            "clicks": 1
+          },
+          {
+            "url": "https://users.rust-lang.org/t/newby-translatted-some-c-into-first-rustc/139054/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Newby translatted some c++ into first rustc",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/cannot-infer-type-for-type-parameter-s-declared-on-the-function/45644/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Cannot infer type for type parameter `S` declared on the function",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/passing-rust-vecs-to-functions/56062/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Passing Rust Vecs to functions",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/structs-traits-associated-types-and-inheritance/62898/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Structs,Traits,Associated Types and Inheritance",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/mongodb-1-2-0-crate-compile-error-when-trying-to-use-sync-feature-or-async-std-runtime/56071/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Mongodb(1.2.0) Crate : Compile Error when trying to use sync feature or async-std-runtime",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/is-posible-egui-change-fonts-to-japanese-how/59662/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Is posible egui change fonts to japanese ? How?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/trait-bound-not-satisfied-but-implemented/88563/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Trait bound not satisfied but implemented",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/noob-confused-about-0-5-vs-5-0-iterating/127042/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Noob confused about \"0..5\" vs. \"5..0\" iterating?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/this-code-is-extremely-erroneous/66170/2",
+            "internal": true,
+            "reflection": true,
+            "title": "This code is extremely erroneous",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-help-needed-beginner/88391/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust help needed, beginner",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-with-mutex-on-fst/49765/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Help with Mutex on fst",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/sum-of-array-of-structs/82809/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Sum of array of structs",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/function-return-a-vector-of-shared-ghost-cell/64668/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Function return a vector of shared ghost cell",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-implement-trait-for-uom-quantity/56098/4",
+            "internal": true,
+            "reflection": true,
+            "title": "How to implement trait for uom::si:Quantity",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-do-i-create-an-instance-of-a-generic-type-on-a-struct/86359/6",
+            "internal": true,
+            "reflection": true,
+            "title": "How do I create an instance of a generic type on a struct?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-code-is-error/83201/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust code is error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-help-needed-beginner/88391/9",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust help needed, beginner",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/reqwest-com-slint/112094/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Reqwest com slint",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/temporary-value-is-freed-at-the-end-of-this-statement/84667/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Temporary value is freed at the end of this statement",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/forcing-edition-2021-with-latest-rustc-rustup/127225/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Forcing edition \"2021\" with latest rustc/rustup",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/explain-why-its-failure/62202/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Explain why its failure",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/c-variadic-functions-in-rust-macro-showing-error/46305/2",
+            "internal": true,
+            "reflection": true,
+            "title": "C Variadic functions in rust macro showing error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/implementing-hash-for-a-set-datatype-i-e-multiple-representations-for-equal-things/52868/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Implementing hash for a set datatype (i.e. multiple representations for Equal things)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/string-concatenation-on-variable-assignment/76025/2",
+            "internal": true,
+            "reflection": true,
+            "title": "String concatenation on variable assignment",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/lifetime-issue-with-deserialization/49046/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Lifetime issue with deserialization",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/issue-sending-spi-result-to-an-egui-ui/126963/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Issue sending spi result to an egui ui",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/read-unknown-number-of-lines/52888/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Read unknown number of lines",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/trait-objects-without-an-explicit-dyn-are-deprecated/70234/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Trait objects without an explicit `dyn` are deprecated",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/no-targets-specified-in-the-manifest/113396/2",
+            "internal": true,
+            "reflection": true,
+            "title": "No targets specified in the manifest",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-serialize-and-protocol-buffer/70261/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust Serialize and protocol buffer",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/references-and-borrowing-rules/92377/2",
+            "internal": true,
+            "reflection": true,
+            "title": "References and Borrowing Rules",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/assert-eq-in-a-for-loop/46127/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Assert_eq in a for loop",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/diesel-problem-when-loading/45303/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Diesel Problem when loading",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/im-new-and-i-need-help-with-code/45343/2",
+            "internal": true,
+            "reflection": true,
+            "title": "I'm new and i need help with code",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/store-a-reference/45375/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Store a reference",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/cannot-deserialize-with-double-quotes-in-the-header/66267/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Cannot deserialize with double quotes in the header",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/assert-init-on-maybeuninit-without-address-change/88496/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Assume_init on MaybeUninit without address change",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/array-of-structs-quick-like-c/83681/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Array of structs, quick like C",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-postgres-interval-datatype-insert-problem/45786/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust Postgres Interval DataType Insert Problem",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-build-c-static-library-into-a-rust-crate-for-no-std-environmrnt/45899/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to build C static library into a rust crate for no_std environmrnt",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/in-a-struct-why-must-i-use-str-and-a-lifetime/44482/2",
+            "internal": true,
+            "reflection": true,
+            "title": "In a struct why must I use \u0026str and a lifetime",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/newbie-why-the-commented-line-stops-the-snippet-from-compiling/47322/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Newbie: Why the commented line stops the snippet from compiling?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/converting-ruby-to-rust-json-parsing/64834/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Converting Ruby to Rust JSON Parsing",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/confused-on-errors-while-going-through-option1-rs-rustling/44667/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Confused on errors while going through option1.rs rustling",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/issue-related-to-use-of-break-statement-with-ok-variant/44683/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Issue related to use of break statement with Ok variant",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-cloning-string-in-the-getter/44690/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Help: Cloning string in the getter",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/add-extra-infomation-to-enum/56329/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Add extra infomation to Enum",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/taking-input-from-scv-file/44734/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Taking input from scv file",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/use-statements-inside-functions/44798/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Use statements inside functions",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/but-data-from-x-flows-into-x-here/64843/2",
+            "internal": true,
+            "reflection": true,
+            "title": "But data from `x` flows into `x` here",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/unmatched-pointer-value-of-a-string-when-ownership-is-passed-on/44825/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Unmatched pointer value of a string when ownership is passed on",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-get-hashmap-key-values/44889/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to get hashmap key values",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-with-installing-windows/45988/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem with installing(windows)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/parse-two-errors-in-async-function-with-reqwest/42987/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Parse two errors in async function with reqwest",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/zero-initialize-a-large-complex-struct-as-global-without-code-overhead/42980/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Zero initialize a large complex struct as global without code overhead",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/pinned-topics-and-categories/43108",
+            "internal": true,
+            "reflection": true,
+            "title": "Pinned topics and categories",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/cannot-use-self-because-it-was-mutably-borrowed/43503/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Cannot use `self....` because it was mutably borrowed",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/immutable-borrow-when-using-get-on-hashmap/47858/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Immutable borrow when using .get on hashmap",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/macro-failed-to-resolve-use-of-undeclared-crate-or-module/65009/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Macro failed to resolve: use of undeclared crate or module",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/a-lifetime-problem/76133/2",
+            "internal": true,
+            "reflection": true,
+            "title": "A lifetime problem",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/calling-for-method-poll-next-on-a-clientsstreamreceiver-gives-error-method-not-found/48065/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Calling for method \"poll_next()\" on a ClientSStreamReceiver gives error: \"method not found\"",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/modify-one-field-of-type-option-serde-json-value-in-a-struct/66349/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Modify one field of type Option\u003cserde_json::Value\u003e in a struct",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/deserialize-json-array-of-structs-without-element-types-using-serde/46810/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Deserialize JSON array of structs without element types using serde",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/explain-this-code/64866/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Explain this code!",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-sharing-futures-across-threads-when-call-from-warp-filter/46830/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem sharing futures across threads when call from warp filter",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/why-cant-i-use-the-value-in-the-vector-for-comparative-operation/46823/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Why can't I use the value in the vector for comparative operation?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/if-program-leave-loop-does-program-loses-ownership-of-the-variable/46493/8",
+            "internal": true,
+            "reflection": true,
+            "title": "If program leave loop, does program loses ownership of the variable?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/btreemap-mutable-value-lookup/105617/5",
+            "internal": true,
+            "reflection": true,
+            "title": "BTreeMap mutable value lookup",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/the-trait-reply-is-not-implemented-for/80919/5",
+            "internal": true,
+            "reflection": true,
+            "title": "The trait `Reply` is not implemented for `()`",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/the-trait-reply-is-not-implemented-for/80919/7",
+            "internal": true,
+            "reflection": true,
+            "title": "The trait `Reply` is not implemented for `()`",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/assignment-to-single-dim-or-0-dim-ndarray/58785/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Assignment to single dim or 0-dim ndarray",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/passing-channels-to-threads/48808/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Passing channels to threads",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/serializing-issue-with-primitive-types-u256-in-a-struct/65280/13",
+            "internal": true,
+            "reflection": true,
+            "title": "Serializing issue with primitive_types::u256 in a struct",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/std-successors-fails-with-overflow-error/105623/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Std::iter::successors fails with overflow error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/what-is-different-between-mut-self-and-mut-self/59708/3",
+            "internal": true,
+            "reflection": true,
+            "title": "What is different between \u0026mut self and mut self?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/beginner-struct-logic-for-card-game/52099/32",
+            "internal": true,
+            "reflection": true,
+            "title": "[Beginner] - Struct Logic for Card Game",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/postgresql-performance/51218/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Postgresql performance",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-calling-midi-windows-api-using-winapi-winmm-for-extern/52549/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem calling midi windows api using winapi/winmm for extern",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/abstracting-serialization-of-specific-state-types/49803/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Abstracting serialization of specific state types",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-with-read-write-data-from-tcp-server-to-server-also-converting/49867/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Help with read-write data from TCP server-to server (also converting)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-read-a-connection-for-a-serial/51551/3",
+            "internal": true,
+            "reflection": true,
+            "title": "How to read a connection for a serial?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-about-refcell/49901/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Help about RefCell",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-with-lifetimes-in-rc-refcell-t/49861/14",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem with lifetimes in Rc\u003cRefCell\u003cT\u003e\u003e",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/mutable-function/104044/13",
+            "internal": true,
+            "reflection": true,
+            "title": "Mutable function",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-with-openoptions-and-write-all/51613/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem with OpenOptions and write_all()",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/scope-resolution-newbie-error/93282/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Scope resolution newbie error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/temporary-value-dropped-while-borrowed-using-into-iter/51654/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Temporary Value Dropped While Borrowed Using into_iter",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/function-definition-with-generic-struct/53870/14",
+            "internal": true,
+            "reflection": true,
+            "title": "Function definition with generic struct",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/parse-multiple-input-based-on-jsonfile-with-lettre/50092/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Parse multiple input based on jsonfile with lettre",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/practicing-match-and-enum-functions/50146/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Practicing match and enum functions",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-collect-string-of-input-into-array/50167/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to collect string of input into array?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-qt-project-compiling-issue/50194/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust-qt project compiling issue",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/here-i-have-skipped-7-line-but-now-i-want-to-get-result-from-that-result-which-i-have-skipped-i-want-to-get-1st-line-from-it-but-i-can-not-get-it-then-how-can-i-get-this-first-line/50277/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Here i have skipped 7 line but now i want to get result from that result which i have skipped. I want to get 1st line from it but i can not get it then how can i get this first line?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/snmp-recoverable-error-handling/52220/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Snmp recoverable error handling",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/reading-fits-files-from-subdirectories/67260/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Reading FITS files from subdirectories",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/retrieving-error-from-result-t-err-e/52292/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Retrieving error from Result\u003cT, Err(e)\u003e",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/hyper-example-proxy-with-rustls/50493/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Hyper example proxy with rustls",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/one-line-conditionals/56400/9",
+            "internal": true,
+            "reflection": true,
+            "title": "One line conditionals",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/what-does-the-word-s-mean/50579/3",
+            "internal": true,
+            "reflection": true,
+            "title": "What does the word \"s\" mean?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/proper-use-of-a-stream-item-event-across-multiple-futures-with-loop-and-next/88172/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Proper use of a Stream\u003cItem = Event\u003e across multiple futures with loop and .next()",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/driver-compilation-issue/55186/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Driver compilation Issue",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/alloc-arc-reference-counting-stymied-by-closure/55226/2",
+            "internal": true,
+            "reflection": true,
+            "title": "alloc::sync::Arc - reference counting stymied by closure?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/debug-serialization-problem/56510/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Debug serialization problem?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-use-cors-in-actix-web/56957/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How use cors in actix-web",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/initialize-a-struct-with-one-of-the-field-in-struct-as-empty-null-nothing/116626/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Initialize a struct with one of the field in struct as empty /null/Nothing",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/fix-the-unsafe-blocks-help/57011/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Fix the unsafe blocks, Help!",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/intresting-how-memory-work-for-tuple-please-help/63244/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Intresting how memory work for tuple.Please help",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/using-require-literal-leading-dot-with-glob-with/88594/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Using require_literal_leading_dot with glob_with",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/fibonacci-sequence-beginner-asking-for-help/58288/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Fibonacci sequence (beginner asking for help)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/macro-with-parameter-option/99601/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Macro with parameter Option",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/write-all-and-read-using-framed-not-working-sending-file-over-the-network/58464/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Write_all and read using framed ... Not working Sending file over the network",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/compilation-error/59885/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Compilation error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/absolutely-rust-newbie-here-please-suggest-me-how-to-improve-this-simple-program/59966/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Absolutely Rust newbie here! Please suggest me how to improve this simple program",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/integrate-hashmap-into-struct-with-methods/61932/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Integrate HashMap into struct with methods",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/log4rs-rolling-file-appender-error/134964/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Log4rs rolling file appender error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/value-borrowed-after-move-how-to-get-the-value-from-inside-a-struct/60188/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Value borrowed after move - how to get the value from inside a struct",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/thiserror-error-into-box-dyn-std-error-send-sync/61688/6",
+            "internal": true,
+            "reflection": true,
+            "title": "thiserror::Error into Box\u003cdyn std::error::Error + Send + Sync\u003e",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/trying-to-configure-a-usart-peripheral/60414/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Trying to configure a USART peripheral",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-remove-duplication-in-a-vector-in-rust/66486/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to remove duplication in a vector in rust",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-array-performance/121573/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust array performance",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/trying-to-understand-moving-ownership-of-vectors-to-funcs/65556/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Trying to understand moving ownership of vectors to funcs",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/regarding-bubble-sort-sort-api/140178/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Regarding bubble sort \u0026 sort api",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/please-help-having-some-problem/62418/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Please help! having some problem",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-book-chapter-8-add-employee-exercise/71757/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust book chapter 8 add employee exercise",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/a-question-about-associated-types/62566/4",
+            "internal": true,
+            "reflection": true,
+            "title": "A question about Associated types",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/diesel-how-to-implement-generic-functions-for-crud-operations-on-any-table-type/63732/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Diesel : how to implement generic functions for CRUD operations on any table type?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/explain-filter-method/65458/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Explain filter method",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/pls-turn-this-code-into-async-with-futures/62640/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Pls Turn this code into async with futures",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/new-to-rust-getting-an-error-pls-help/62645/2",
+            "internal": true,
+            "reflection": true,
+            "title": "New to Rust...Getting an error. Pls help",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-get-message-field-out-of-std-error/65474/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How to get \"message\" field out of std::io::error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/unsafe-related-question/62723/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Unsafe related question",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/sqlx-only-accept-string-literal-how-to-use-variable/64017/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Sqlx only accept string literal, how to use variable?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-do-i-solve-this-issue-cant-explain-the-issue-properly/71778/6",
+            "internal": true,
+            "reflection": true,
+            "title": "How do i solve this issue, can't explain the issue properly",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/using-enum-in-different-modules/66608/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Using enum in different modules",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/failed-to-parse-json-from-str/104519/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Failed to parse json from str",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/small-questions-about-using-break/86719/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Small questions about using break",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/i-have-a-question-with-chrono-and-sqlx-when-i-insert-datetime-to-postgres/115198/2",
+            "internal": true,
+            "reflection": true,
+            "title": "I have a question with chrono and sqlx when i insert datetime to postgres",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-intel-fortran-lib/69961/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust + Intel Fortran LIB",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/error-related-to-cargo-toml/121609/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Error related to Cargo.toml",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/error-importing-icm20948-async-crate/117902/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Error Importing icm20948-async Crate",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/variable-value-readable-but-not-mutable-scope-issue/66970/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Variable value readable but not mutable (scope issue)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/compilation-errors-about-generic-trait/94101/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Compilation errors about generic trait",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/reading-a-file-with-struct-trait-and-impl/55427/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Reading a File with Struct, Trait and Impl",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/why-the-complier-fail-to-test/113728/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Why the complier fail to test",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/the-prototype-pattern-and-rust/72496/6",
+            "internal": true,
+            "reflection": true,
+            "title": "The Prototype Pattern and Rust",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-with-function-to-find-max-value-in-array/92540/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Help With Function to find MAX value in Array",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/implement-statics-trie-tree/74458/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Implement static's trie-tree?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/not-able-to-print-captured-variable-to-output/72676/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Not able to print captured variable to output",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/dht11-and-pico-combo/74858/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Dht11 and pico - combo",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/cannot-compile-my-code/72894/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Cannot compile my code",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-deal-with-response-web-site/74900/3",
+            "internal": true,
+            "reflection": true,
+            "title": "How to deal with response? (web site)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/what-is-wrong-with-my-code/104206/3",
+            "internal": true,
+            "reflection": true,
+            "title": "What is wrong with my code?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-write-a-program-in-rust-to-read-a-csv-file-and-create-two-output-csv-files-one-file-with-odd-rows-and-the-other-file-with-even-rows-from-the-input-file/77494/7",
+            "internal": true,
+            "reflection": true,
+            "title": "help,Write a program in Rust to read a CSV file and create two output CSV files – one file with odd rows and the other file with even rows from the input file",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/why-does-the-following-code-compile-successfully/89236/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Why does the following code compile successfully?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/new-to-coding-chapter-3-project/80517/2",
+            "internal": true,
+            "reflection": true,
+            "title": "New to coding, Chapter 3 project",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/expected-mut-vec-usize-found-mut-vec-range-integer/123950/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Expected `\u0026mut Vec\u003cusize\u003e`, found `\u0026mut Vec\u003cRange\u003c{integer}\u003e\u003e`",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-set-the-limitation-for-args/78814/6",
+            "internal": true,
+            "reflection": true,
+            "title": "How to set the limitation for args",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/derive-template-get-error/104236/2",
+            "internal": true,
+            "reflection": true,
+            "title": "#[derive(Template)] get error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/solved-how-to-use-string-for-email-address/80253/2",
+            "internal": true,
+            "reflection": true,
+            "title": "[Solved]How to use String for email address",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/passing-struct-containing-references-as-argument-to-an-async-function/53555/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Passing struct containing references as argument to an async function",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/variable-value-readable-but-not-mutable-scope-issue/66970/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Variable value readable but not mutable (scope issue)",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/1-convenient-passing-arguments-to-println-2-difference-between-slice-and-str/50494/2",
+            "internal": true,
+            "reflection": true,
+            "title": "1) convenient passing arguments to println!; 2) difference between slice and \u0026str",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/solved-rust-thread-errors/52344/3",
+            "internal": true,
+            "reflection": true,
+            "title": "[Solved] Rust thread errors",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/c-converted-to-rust-compiled-ok-but-got-a-bad-result-which-step-is-wrong/45554/3",
+            "internal": true,
+            "reflection": true,
+            "title": "C++ converted to Rust, compiled ok but got a bad result. Which step is wrong?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/c-converted-to-rust-compiled-ok-but-got-a-bad-result-which-step-is-wrong/45554/2",
+            "internal": true,
+            "reflection": true,
+            "title": "C++ converted to Rust, compiled ok but got a bad result. Which step is wrong?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/solved-escape-quotes-and-back-slash-in-process-command-arguments/43641/2",
+            "internal": true,
+            "reflection": true,
+            "title": "[Solved] Escape Quotes and Back Slash in Process Command Arguments",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-compare-variables-of-two-types-without-type-conversion-or-type-casting-using-if-statement/43272/3",
+            "internal": true,
+            "reflection": true,
+            "title": "How to compare variables of two types without type conversion or type casting using if statement",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-fix-this-error/131097/6",
+            "internal": true,
+            "reflection": true,
+            "title": "How to fix this error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/struct-impl-properties/87189/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Struct impl properties",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/need-help-im-new-to-rust-and-trying-to-exploring-rust/122129/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Need help, i'm new to rust, and trying to exploring rust",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/asm-register-classes/121741/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Asm! register classes",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/can-someone-explain-what-i-am-doing-wrong/81397/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Can someone explain what I am doing wrong?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/replacing-macros/121843/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Replacing Macros",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-and-c-compatibility/79996/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust and C++ Compatibility",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/crate-lettre-doesnt-support-multiple-recipients/80813/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Crate 'Lettre' : doesn't support multiple recipients?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/multithreading-in-rust/90959/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Multithreading in rust",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/not-able-to-build-the-code-due-to-some-errors-in-the-codes/94248/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Not able to build the code due to some errors in the codes",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-implement-inheritence-in-rust/92774/3",
+            "internal": true,
+            "reflection": true,
+            "title": "How to Implement inheritence in rust?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-the-rust-how-to-lookup-method-for-different-object/89278/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How the rust how to lookup method for different object",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/i-want-to-know-how-i-can-compile-this-code-under-linux/89312/9",
+            "internal": true,
+            "reflection": true,
+            "title": "I want to know how I can compile this code under linux",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/advice-regarding-increasing-performance-of-network-packet-processing/91331/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Advice regarding increasing performance of network packet processing",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/install-duplicates-about-4-7-of-rustup-on-windows/91661/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Install Duplicates About 4.7% of .rustup on Windows",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/question-on-vector-of-mutable-reference-into-struct/89829/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Question on vector of mutable reference into struct",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/display-retry-message-inside-loop-for-string-input/91831/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Display \u003c retry \u003e message inside loop for string input",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-do-i-properly-resolve-the-error-temporary-value-dropped-while-borrowed/92053/4",
+            "internal": true,
+            "reflection": true,
+            "title": "How do I properly resolve the error \"temporary value dropped while borrowed\"?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-do-i-keep-the-globally-pinned-threads-always-pinned-in-my-view/137269",
+            "internal": true,
+            "reflection": true,
+            "title": "How do I keep the globally pinned threads always pinned in my view?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/blink-rs-of-embassy-examples-is-not-blinking-my-led/115512/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Blink.rs of embassy examples is not blinking my led",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/resetting-a-mutable-string-variable-and-getting-an-err/96639/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Resetting a mutable string variable and getting an Err",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/a-semi-colon-madness/96763/3",
+            "internal": true,
+            "reflection": true,
+            "title": "A semi-colon madness",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/pub-crate-impl-thirdtrait-for-fourthstruct/104756/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Pub(crate) impl ThirdTrait for FourthStruct{....}",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/in-this-program-foo-is-still-mutably-borrowed/98295/6",
+            "internal": true,
+            "reflection": true,
+            "title": "In this program `foo` is still mutably borrowed?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/send-command-to-kubernetes-pod/96910/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Send command to kubernetes pod",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/error-failed-to-run-custom-build-command-for-exonum-proto-v1-0-0/98182/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Error: failed to run custom build command for `exonum-proto v1.0.0`",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/macro-rules-macro-call-macro/121932/10",
+            "internal": true,
+            "reflection": true,
+            "title": "Macro_rules! , Macro Call Macro",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/keeping-score-in-a-baseball-game-simulation-is-hash-map-the-way-to-go/81757/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Keeping score in a baseball game simulation - Is Hash Map the way to go?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/seems-impossible-to-use-read-exact-for-socks5-domain-name/110728/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Seems impossible to use read_exact for socks5 domain name",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/help-the-trait-std-send-is-not-implemented-for-dyn-future-output-result-option-vec-u8-error/129271/9",
+            "internal": true,
+            "reflection": true,
+            "title": "Help: the trait `std::marker::Send` is not implemented for `dyn Future\u003cOutput = Result\u003cOption\u003cVec\u003cu8\u003e\u003e, Error\u003e\u003e`",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/have-i-found-a-borrow-checker-bug-a-weird-lifetime-related-error/113273/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Have I found a borrow checker bug? - a weird lifetime related error",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-web-server-transferring-data-to-the-program-beginner/111230/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust web server transferring data to the program - beginner",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/return-expressions-is-a-expression-why-add-a-semicolon-after-an-return-expression/106929/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Return expressions is a expression，Why add a semicolon after an return expression？",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/401-when-trying-to-create-a-tweet-on-twitter-x/107026/9",
+            "internal": true,
+            "reflection": true,
+            "title": "401 when trying to create a tweet on Twitter/X",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/new-to-lifetimes-borrowing-and-ownership/122023/3",
+            "internal": true,
+            "reflection": true,
+            "title": "New to Lifetimes: borrowing and ownership",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/binding-does-not-live-long-enough/126926/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Binding does not live long enough",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/a-function-returns-transferring-an-ownership-of-heap-data-but-there-is-no-variable-to-receive-it-when-does-heap-memory-get-deallocated/105142/4",
+            "internal": true,
+            "reflection": true,
+            "title": "A function returns transferring an ownership of heap data but there is no variable to receive it, when does heap memory get deallocated?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/command-line-parser/108193/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Command line parser",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/unable-to-get-past-borrow-issue/126762/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Unable to get past borrow issue",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-with-c-rust-speed-comparison-result/105398/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem with C/Rust speed comparison result",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/when-im-using-tokio-and-tokio-tungstenite-i-want-to-send-some-data-messages-in-a-callback-function-but-the-program-reports-an-error-there-is-no-reactor-running-must-be-called-from-the-context-of-a-tokio-1-x-runtime-note-run-with-rust-backtrace-1/109296/2",
+            "internal": true,
+            "reflection": true,
+            "title": "When I'm using tokio and tokio_tungstenite, I want to send some data messages in a callback function, but the program reports an error ’there is no reactor running, must be called from the context of a Tokio 1.x runtime note: run with `RUST_BACKTRACE=1` ‘",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/please-help-a-little-noob/111320/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Please help a little noob!",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/seeking-volunteer-mentor-to-enhance-my-rust-programming-abilities/111443/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Seeking Volunteer Mentor to Enhance My Rust Programming Abilities",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/best-practices-to-avoid-self-referential-structs/111700/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Best Practices to avoid \"Self Referential\" structs",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/const-for-lazylock-oncelock-should-raise-a-error-or-warning/131765/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Const for LazyLock/OnceLock should Raise a error or warning",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-collect-the-iterator-created-by-vec-windows/111765/3",
+            "internal": true,
+            "reflection": true,
+            "title": "How to Collect the Iterator created by Vec::windows()",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/vectors-compile/111831/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Vectors compile",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/howto-write-a-from-function-for-own-struct/111849/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Howto write a From\u003c\u003e function for own struct?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/errors-when-programming-in-bevy-errors-with-shapes-and-colors/115729/8",
+            "internal": true,
+            "reflection": true,
+            "title": "Errors when programming in bevy, errors with shapes and colors",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-do-align-cast-in-rust/110013/5",
+            "internal": true,
+            "reflection": true,
+            "title": "How to do align cast in rust?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/some-use-of-error-handling/114234/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Some use of error handling",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/doubt-in-borrowing-the-derefrenced-pointer-value-representation-in-the-book-chapter-4-2/110131/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Doubt in borrowing the derefrenced pointer value representation in the Book Chapter 4.2",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/print-statement-not-printing-to-screen/110143/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Print Statement not printing to screen",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/create-an-exe-that-exports-symbols-solution/113237/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Create an .exe that exports symbols - solution",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/i-defined-the-mod-utils-but-when-i-refrenence-it-i-got-an-error-saying-it-could-not-find/124323/3",
+            "internal": true,
+            "reflection": true,
+            "title": "I defined the mod utils. but when i refrenence it, I got an error saying it could not find",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/serde-json-how-to-read-as-singe-entry/116913/6",
+            "internal": true,
+            "reflection": true,
+            "title": "Serde_json how to read as singe entry?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/the-target-is-a-binary-and-cant-have-any-crate-types-set-currently-cdylib-rlib/117449/2",
+            "internal": true,
+            "reflection": true,
+            "title": "The target is a binary and can't have any crate-types set (currently \"cdylib, rlib\")",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/temporary-value-dropped-while-borrowed-weird/119416/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Temporary value dropped while borrowed. Weird!",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-in-numerical/119517/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust in numerical",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/displaying-rand-thread-rng-using-println/124459/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Displaying -- rand::thread_rng -- using -- println!()",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/implementing-rust-traits-without-a-type-conflict/122668/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Implementing rust traits without a type conflict",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/im-learning-how-much-this-piece-of-code-can-be-improved/120214/3",
+            "internal": true,
+            "reflection": true,
+            "title": "I'm learning how much this piece of code can be improved",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/register-access-problem/122706/9",
+            "internal": true,
+            "reflection": true,
+            "title": "Register Access problem",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/pushing-responses-to-stringg-is-taking-too-much-time-about-1-4-min-to-read-how-to-read-the-string-faster/121278/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Pushing responses to stringg is taking too much time about 1-4 min to read , how to read the string faster",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/issues-importing-local-library-crate/127293/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Issues importing local library crate",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust/125813/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Rustをインストールしました",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/is-cargo-build-target-x86-64-unknown-linux-musl-is-not-possible-anymore-with-rust-1-82/123584/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Is cargo build --target x86_64-unknown-linux-musl is not possible anymore with Rust 1.82?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/the-error-message-main-rs-written-with-deepseek-does-not-have-a-red-or-yellow-warning/124917/2",
+            "internal": true,
+            "reflection": true,
+            "title": "The error message main.rs written with Deepseek does not have a red or yellow warning",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/whats-everyone-working-on-this-week-1-2025/123250/9",
+            "internal": true,
+            "reflection": true,
+            "title": "What's everyone working on this week (1/2025)?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/please-modify-this-small-program-to-make-it-safe/128654/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Please modify this small program to make it safe",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/why-does-calling-lock-crash-my-application/127502/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Why does calling .lock() crash my Application?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-pdk-filter-backend-returns-415-unsupported-media-type-after-forwarding-request/134628/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust PDK Filter: Backend returns 415 Unsupported Media Type after forwarding request",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/error-failed-to-parse-manifest-at-desktop-cargo-toml/109798/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Error: failed to parse manifest at .......Desktop/Cargo.toml`",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/lifetime-params-for-more-complex-function-returns/45516/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Lifetime params for more complex function returns",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/unable-to-access-function-within-same-module/93881/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Unable to Access Function within Same Module",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/address-of-associated-constant/59602/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Address of associated constant",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/rust-embassy-help/111938/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Rust Embassy Help",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/where-to-put-the-trait-definition/66083/3",
+            "internal": true,
+            "reflection": true,
+            "title": "Where to put the trait-definition",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/problem-with-connecting-diesel-and-rocket-with-a-triait/84879/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Problem with connecting diesel and rocket with a triait",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/hello-you-need-to-my-ask-something-about-rust/81851/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Hello you need to my ask something about rust",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/guessing-game-compile-issue/46726/7",
+            "internal": true,
+            "reflection": true,
+            "title": "Guessing_Game Compile Issue",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/loops-and-pointers-num-and-num-are-the-same/70048/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Loops and Pointers - *num and num are the same",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/what-is-the-difference-between-impl-t-and-impl-t-config/64518/3",
+            "internal": true,
+            "reflection": true,
+            "title": "What is the difference between impl\u003cT\u003e and impl\u003cT: Config\u003e",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/please-help-me-get-rayon-struggling-with-trait-implementations-to-work-in-my-rust-bio-bioinformatics-tool-rust-implementation/64521/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Please help me get rayon--struggling with trait implementations--to work in my rust-bio bioinformatics tool Rust implementation",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-do-i-run-the-simple-rs-gimli-example/54630/2",
+            "internal": true,
+            "reflection": true,
+            "title": "How do I run the simple.rs gimli example?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-do-i-run-the-simple-rs-gimli-example/54630/11",
+            "internal": true,
+            "reflection": true,
+            "title": "How do I run the simple.rs gimli example?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/probably-a-bug-found/82132/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Probably a bug found",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/how-to-print-two-user-input-in-a-single-line/45607/5",
+            "internal": true,
+            "reflection": true,
+            "title": "How to print two user input in a single line?",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/unable-to-read-or-update-hashmap-values/44984/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Unable to read or update hashMap values",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/multiplication-overflow/123418/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Multiplication overflow",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/conflicting-implementations/58882/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Conflicting implementations",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/input-shows-enter-n/44990/4",
+            "internal": true,
+            "reflection": true,
+            "title": "Input shows enter ./n",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/why-move-occurs/47660/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Why \"move occurs\"",
+            "clicks": 0
+          },
+          {
+            "url": "https://users.rust-lang.org/t/converting-an-image-into-a-2d-matrix/56032/5",
+            "internal": true,
+            "reflection": true,
+            "title": "Converting an image into a 2D matrix",
+            "clicks": 0
+          }
+        ],
+        "read": true,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "count": 87,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 7317,
+        "hidden": false,
+        "trust_level": 2,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/forum-code-formatting-and-syntax-highlighting/42214/1",
+        "can_assign": false,
+        "calendar_details": [],
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null,
+        "can_vote": false
+      },
+      {
+        "id": 165432,
+        "name": "Alice Ryhl",
+        "username": "alice",
+        "avatar_template": "/user_avatar/users.rust-lang.org/alice/{size}/9777_2.png",
+        "created_at": "2020-05-07T15:33:43.428Z",
+        "cooked": "\u003cp\u003eSeems like pinning this thread would be fine?\u003c/p\u003e",
+        "post_number": 2,
+        "post_type": 1,
+        "posts_count": 4,
+        "updated_at": "2020-05-07T15:33:43.428Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 81,
+        "reads": 3079,
+        "readers_count": 3078,
+        "score": 1215.2,
+        "yours": false,
+        "topic_id": 42214,
+        "topic_slug": "forum-code-formatting-and-syntax-highlighting",
+        "display_username": "Alice Ryhl",
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_bg_color": null,
+        "flair_color": null,
+        "flair_group_id": null,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": true,
+        "user_title": "Regular",
+        "title_is_group": false,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "count": 13,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 10869,
+        "hidden": false,
+        "trust_level": 4,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/forum-code-formatting-and-syntax-highlighting/42214/2",
+        "can_assign": false,
+        "user_cakedate": "2019-01-03",
+        "user_birthdate": "1904-02-03",
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 165453,
+        "name": "Matt Brubeck",
+        "username": "mbrubeck",
+        "avatar_template": "/user_avatar/users.rust-lang.org/mbrubeck/{size}/648_2.png",
+        "created_at": "2020-05-07T17:38:46.412Z",
+        "cooked": "",
+        "post_number": 3,
+        "post_type": 3,
+        "posts_count": 4,
+        "updated_at": "2020-05-07T17:38:46.412Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 20,
+        "reads": 2903,
+        "readers_count": 2902,
+        "score": 680.0,
+        "yours": false,
+        "topic_id": 42214,
+        "topic_slug": "forum-code-formatting-and-syntax-highlighting",
+        "display_username": "Matt Brubeck",
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_bg_color": null,
+        "flair_color": null,
+        "flair_group_id": null,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": true,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 719,
+        "hidden": false,
+        "trust_level": 4,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "action_code": "pinned_globally.enabled",
+        "post_url": "/t/forum-code-formatting-and-syntax-highlighting/42214/3",
+        "can_assign": false,
+        "user_cakedate": "2015-04-21",
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 165467,
+        "name": "Ixrec",
+        "username": "Ixrec",
+        "avatar_template": "/user_avatar/users.rust-lang.org/ixrec/{size}/15209_2.png",
+        "created_at": "2020-05-07T18:39:07.205Z",
+        "cooked": "\u003cp\u003eThis is part of \"\u003cstrong\u003emarkdown\u003c/strong\u003e\", a standard text formatting syntax not unique to Github. These days most implementations I know of are using the CommonMark spec with some extentions. Here are some links:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eCommonMark's introduction to markdown: \u003ca href=\"https://commonmark.org/help/\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\"\u003eMarkdown Reference\u003c/a\u003e\n\u003c/li\u003e\n\u003cli\u003eThe latest version of the CommonMark spec: \u003ca href=\"https://spec.commonmark.org/current/\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\"\u003eRedirecting...\u003c/a\u003e (which calls these ``` blocks \"\u003ca href=\"https://spec.commonmark.org/0.29/#fenced-code-blocks\" rel=\"noopener nofollow ugc\"\u003eFenced Code Blocks\u003c/a\u003e\" and the \u003ccode\u003ecpp\u003c/code\u003e part an \"\u003ca href=\"https://spec.commonmark.org/0.29/#info-string\" rel=\"noopener nofollow ugc\"\u003eInfo String\u003c/a\u003e\")\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://meta.discourse.org/t/post-format-reference-documentation/19197\" rel=\"noopener nofollow ugc\"\u003eDiscourse's markdown is just CommonMark plus a few extentions\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eGithub uses what it calls \u003ca href=\"https://guides.github.com/features/mastering-markdown/\" rel=\"noopener nofollow ugc\"\u003eGFM (Github-Flavored Markdown)\u003c/a\u003e, which is also \u003ca href=\"https://github.github.com/gfm/\" rel=\"noopener nofollow ugc\"\u003eformally specified as an extension of CommonMark\u003c/a\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eI've also personally used ```s and other bits of markdown on StackOverflow, Slack and Discord, so it's pretty close to universal.\u003c/p\u003e",
+        "post_number": 4,
+        "post_type": 1,
+        "posts_count": 4,
+        "updated_at": "2020-05-07T18:43:20.902Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 38,
+        "reads": 2897,
+        "readers_count": 2896,
+        "score": 1053.8,
+        "yours": false,
+        "topic_id": 42214,
+        "topic_slug": "forum-code-formatting-and-syntax-highlighting",
+        "display_username": "Ixrec",
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_bg_color": null,
+        "flair_color": null,
+        "flair_group_id": null,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://commonmark.org/help/",
+            "internal": false,
+            "reflection": false,
+            "title": "Markdown Reference",
+            "clicks": 152
+          },
+          {
+            "url": "https://meta.discourse.org/t/post-format-reference-documentation/19197",
+            "internal": false,
+            "reflection": false,
+            "title": "Post format reference documentation - faq - Discourse Meta",
+            "clicks": 46
+          },
+          {
+            "url": "https://github.github.com/gfm/",
+            "internal": false,
+            "reflection": false,
+            "title": "GitHub Flavored Markdown Spec",
+            "clicks": 30
+          },
+          {
+            "url": "https://spec.commonmark.org/current/",
+            "internal": false,
+            "reflection": false,
+            "title": "Redirecting...",
+            "clicks": 27
+          },
+          {
+            "url": "https://spec.commonmark.org/0.29/#fenced-code-blocks",
+            "internal": false,
+            "reflection": false,
+            "title": "CommonMark Spec",
+            "clicks": 25
+          },
+          {
+            "url": "https://guides.github.com/features/mastering-markdown/",
+            "internal": false,
+            "reflection": false,
+            "title": "Mastering Markdown · GitHub Guides",
+            "clicks": 24
+          },
+          {
+            "url": "https://spec.commonmark.org/0.29/#info-string",
+            "internal": false,
+            "reflection": false,
+            "title": "CommonMark Spec",
+            "clicks": 9
+          }
+        ],
+        "read": true,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "count": 19,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 3932,
+        "hidden": false,
+        "trust_level": 2,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/forum-code-formatting-and-syntax-highlighting/42214/4",
+        "can_assign": false,
+        "user_cakedate": "2016-09-12",
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 165470,
+        "name": "",
+        "username": "chrisd",
+        "avatar_template": "/user_avatar/users.rust-lang.org/chrisd/{size}/11859_2.png",
+        "created_at": "2020-05-07T18:46:41.233Z",
+        "cooked": "\u003cp\u003eSince this has now been pinned (thanks!) I've removed the last note that lxrec is responding to, but I'll copy it here for posterity:\u003c/p\u003e\n\u003cdetails\u003e\n\u003csummary\u003e\nSummary\u003c/summary\u003e\n\u003cblockquote\u003e\n\u003cp\u003eHowever this way of posting code isn't so obvious. It relies on a new user being aware of the github syntax and guessing that this forum uses the same syntax. I didn't when I first arrived and frequently new users post code that's hard to read because they aren't aware of how to format it for this forum's software.\u003c/p\u003e\n\u003cp\u003eCould there be somewhere that explains this placed where new users can see it?\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003c/details\u003e\n\u003cp\u003eI didn't realize that the syntax was now in the CommonMark spec. Thanks for the correction.\u003c/p\u003e",
+        "post_number": 5,
+        "post_type": 1,
+        "posts_count": 4,
+        "updated_at": "2020-05-07T18:48:07.604Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 59,
+        "reads": 2406,
+        "readers_count": 2405,
+        "score": 850.4,
+        "yours": false,
+        "topic_id": 42214,
+        "topic_slug": "forum-code-formatting-and-syntax-highlighting",
+        "display_username": "",
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_bg_color": null,
+        "flair_color": null,
+        "flair_group_id": null,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "link_counts": [
+          {
+            "url": "https://users.rust-lang.org/t/strings-references-and-derefrences/132696/2",
+            "internal": true,
+            "reflection": true,
+            "title": "Strings - References and Derefrences",
+            "clicks": 4
+          }
+        ],
+        "read": true,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "count": 5,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 7317,
+        "hidden": false,
+        "trust_level": 2,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "post_url": "/t/forum-code-formatting-and-syntax-highlighting/42214/5",
+        "can_assign": false,
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      },
+      {
+        "id": 165479,
+        "name": "Matt Brubeck",
+        "username": "mbrubeck",
+        "avatar_template": "/user_avatar/users.rust-lang.org/mbrubeck/{size}/648_2.png",
+        "created_at": "2020-05-07T19:50:39.808Z",
+        "cooked": "",
+        "post_number": 6,
+        "post_type": 3,
+        "posts_count": 4,
+        "updated_at": "2020-05-07T19:50:39.808Z",
+        "reply_count": 0,
+        "reply_to_post_number": null,
+        "quote_count": 0,
+        "incoming_link_count": 44,
+        "reads": 2063,
+        "readers_count": 2062,
+        "score": 632.6,
+        "yours": false,
+        "topic_id": 42214,
+        "topic_slug": "forum-code-formatting-and-syntax-highlighting",
+        "display_username": "Matt Brubeck",
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_bg_color": null,
+        "flair_color": null,
+        "flair_group_id": null,
+        "badges_granted": [],
+        "version": 1,
+        "can_edit": false,
+        "can_delete": false,
+        "can_recover": false,
+        "can_see_hidden_post": false,
+        "can_wiki": false,
+        "read": false,
+        "user_title": null,
+        "bookmarked": false,
+        "actions_summary": [
+          {
+            "id": 2,
+            "can_act": true
+          },
+          {
+            "id": 6,
+            "can_act": true
+          },
+          {
+            "id": 3,
+            "can_act": true
+          },
+          {
+            "id": 4,
+            "can_act": true
+          },
+          {
+            "id": 8,
+            "can_act": true
+          },
+          {
+            "id": 10,
+            "can_act": true
+          },
+          {
+            "id": 7,
+            "can_act": true
+          }
+        ],
+        "moderator": false,
+        "admin": false,
+        "staff": false,
+        "user_id": 719,
+        "hidden": false,
+        "trust_level": 4,
+        "deleted_at": null,
+        "user_deleted": false,
+        "edit_reason": null,
+        "can_view_edit_history": true,
+        "wiki": false,
+        "action_code": "closed.enabled",
+        "post_url": "/t/forum-code-formatting-and-syntax-highlighting/42214/6",
+        "can_assign": false,
+        "user_cakedate": "2015-04-21",
+        "can_accept_answer": false,
+        "can_unaccept_answer": false,
+        "accepted_answer": false,
+        "topic_accepted_answer": null
+      }
+    ],
+    "stream": [
+      165427,
+      165432,
+      165453,
+      165467,
+      165470,
+      165479
+    ]
+  },
+  "timeline_lookup": [
+    [
+      1,
+      2290
+    ]
+  ],
+  "suggested_topics": [
+    {
+      "fancy_title": "Doc lock file not getting deleted after successful docs generation, causing permission error",
+      "id": 141876,
+      "title": "Doc lock file not getting deleted after successful docs generation, causing permission error",
+      "slug": "doc-lock-file-not-getting-deleted-after-successful-docs-generation-causing-permission-error",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2026-08-14T16:07:11.362Z",
+      "last_posted_at": "2026-08-14T16:07:11.453Z",
+      "bumped": true,
+      "bumped_at": "2026-08-14T16:07:11.453Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 0,
+      "views": 22,
+      "category_id": 5,
+      "featured_link": null,
+      "op_like_count": 0,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 48921,
+            "username": "TheJanzap",
+            "name": "TheJanzap",
+            "avatar_template": "/user_avatar/users.rust-lang.org/thejanzap/{size}/49601_2.png",
+            "trust_level": 1
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "Help figuring out where drop is called in this case",
+      "id": 141870,
+      "title": "Help figuring out where drop is called in this case",
+      "slug": "help-figuring-out-where-drop-is-called-in-this-case",
+      "posts_count": 5,
+      "reply_count": 2,
+      "highest_post_number": 5,
+      "image_url": null,
+      "created_at": "2026-08-14T06:50:28.620Z",
+      "last_posted_at": "2026-08-14T14:57:01.935Z",
+      "bumped": true,
+      "bumped_at": "2026-08-14T14:57:01.935Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 6,
+      "views": 79,
+      "category_id": 5,
+      "featured_link": null,
+      "op_like_count": 0,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 47552,
+            "username": "napapa",
+            "name": "Nora",
+            "avatar_template": "/user_avatar/users.rust-lang.org/napapa/{size}/53407_2.png",
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster, Accepted Answer",
+          "user": {
+            "id": 49918,
+            "username": "Morgane55440",
+            "name": "Morgane55440",
+            "avatar_template": "/user_avatar/users.rust-lang.org/morgane55440/{size}/50376_2.png",
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 23531,
+            "username": "kpreid",
+            "name": "Kevin Reid",
+            "avatar_template": "/user_avatar/users.rust-lang.org/kpreid/{size}/22420_2.png",
+            "trust_level": 2
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "Replace Text with lopdf It is possible for PDFs with large texts",
+      "id": 141875,
+      "title": "Replace Text with lopdf It is possible for PDFs with large texts",
+      "slug": "replace-text-with-lopdf-it-is-possible-for-pdfs-with-large-texts",
+      "posts_count": 2,
+      "reply_count": 0,
+      "highest_post_number": 2,
+      "image_url": "https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/3X/f/f/ffdaec698fbb1c91a4e8f0934edcba294d9720c0.png",
+      "created_at": "2026-08-14T14:33:58.925Z",
+      "last_posted_at": "2026-08-14T14:50:36.242Z",
+      "bumped": true,
+      "bumped_at": "2026-08-14T14:50:36.242Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 0,
+      "views": 27,
+      "category_id": 5,
+      "featured_link": null,
+      "op_like_count": 0,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": null,
+          "description": "Original Poster",
+          "user": {
+            "id": 53746,
+            "username": "jamb1975",
+            "name": "INGENIERO JAVIER MURCIA",
+            "avatar_template": "/user_avatar/users.rust-lang.org/jamb1975/{size}/53581_2.png",
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": "latest",
+          "description": "Most Recent Poster",
+          "user": {
+            "id": 41398,
+            "username": "conqp",
+            "name": "Richard Neumann",
+            "avatar_template": "/user_avatar/users.rust-lang.org/conqp/{size}/42559_2.png",
+            "trust_level": 2
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "Tenferro-rs: a scientific tensor runtime for Rust",
+      "id": 141873,
+      "title": "Tenferro-rs: a scientific tensor runtime for Rust",
+      "slug": "tenferro-rs-a-scientific-tensor-runtime-for-rust",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2026-08-14T12:46:03.902Z",
+      "last_posted_at": "2026-08-14T12:46:04.004Z",
+      "bumped": true,
+      "bumped_at": "2026-08-14T12:46:04.004Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 1,
+      "views": 22,
+      "category_id": 6,
+      "featured_link": null,
+      "op_like_count": 1,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 53742,
+            "username": "shinaoka",
+            "name": "Hiroshi Shinaoka",
+            "avatar_template": "/user_avatar/users.rust-lang.org/shinaoka/{size}/53574_2.png",
+            "trust_level": 0
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "EPUB/FB2 Console Reader",
+      "id": 141871,
+      "title": "EPUB/FB2 Console Reader",
+      "slug": "epub-fb2-console-reader",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2026-08-14T10:54:38.559Z",
+      "last_posted_at": "2026-08-14T10:54:38.659Z",
+      "bumped": true,
+      "bumped_at": "2026-08-14T10:54:38.659Z",
+      "archetype": "regular",
+      "unseen": true,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": false,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 0,
+      "views": 33,
+      "category_id": 6,
+      "featured_link": null,
+      "op_like_count": 0,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest single",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 52773,
+            "username": "Aleix",
+            "name": "Aleksei Matiushkin",
+            "avatar_template": "/user_avatar/users.rust-lang.org/aleix/{size}/53019_2.png",
+            "trust_level": 0
+          }
+        }
+      ]
+    }
+  ],
+  "fancy_title": "Forum Code Formatting and Syntax Highlighting",
+  "id": 42214,
+  "title": "Forum Code Formatting and Syntax Highlighting",
+  "posts_count": 4,
+  "created_at": "2020-05-07T15:05:15.388Z",
+  "views": 50618,
+  "reply_count": 0,
+  "like_count": 124,
+  "last_posted_at": "2020-05-07T18:46:41.233Z",
+  "visible": true,
+  "closed": true,
+  "archived": false,
+  "has_summary": false,
+  "archetype": "regular",
+  "slug": "forum-code-formatting-and-syntax-highlighting",
+  "category_id": 3,
+  "word_count": 487,
+  "deleted_at": null,
+  "user_id": 7317,
+  "featured_link": null,
+  "pinned_globally": true,
+  "pinned_at": "2020-05-07T17:38:46.043Z",
+  "pinned_until": "3020-05-07T15:00:00.000Z",
+  "image_url": null,
+  "slow_mode_seconds": 0,
+  "draft": null,
+  "draft_key": "topic_42214",
+  "draft_sequence": 0,
+  "posted": false,
+  "unpinned": null,
+  "pinned": true,
+  "current_post_number": 1,
+  "highest_post_number": 6,
+  "last_read_post_number": 5,
+  "last_read_post_id": 165470,
+  "deleted_by": null,
+  "actions_summary": [
+    {
+      "id": 4,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 8,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 10,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    },
+    {
+      "id": 7,
+      "count": 0,
+      "hidden": false,
+      "can_act": true
+    }
+  ],
+  "chunk_size": 20,
+  "bookmarked": false,
+  "topic_timer": null,
+  "message_bus_last_id": 0,
+  "participant_count": 3,
+  "show_read_indicator": false,
+  "thumbnails": null,
+  "slow_mode_enabled_until": null,
+  "related_topics": [
+    {
+      "fancy_title": "Pasting code here is pretty annoying sometimes?",
+      "id": 39128,
+      "title": "Pasting code here is pretty annoying sometimes?",
+      "slug": "pasting-code-here-is-pretty-annoying-sometimes",
+      "posts_count": 5,
+      "reply_count": 2,
+      "highest_post_number": 5,
+      "image_url": null,
+      "created_at": "2020-03-05T22:54:02.160Z",
+      "last_posted_at": "2020-03-05T23:12:03.458Z",
+      "bumped": true,
+      "bumped_at": "2020-03-05T23:12:03.458Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 2,
+      "views": 998,
+      "category_id": 3,
+      "featured_link": null,
+      "op_like_count": 0,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": "latest",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 15513,
+            "username": "ONiel",
+            "name": "ONiel",
+            "avatar_template": "/user_avatar/users.rust-lang.org/oniel/{size}/14492_2.png",
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster, Accepted Answer",
+          "user": {
+            "id": 8,
+            "username": "cuviper",
+            "name": "Josh Stone",
+            "avatar_template": "/user_avatar/users.rust-lang.org/cuviper/{size}/3156_2.png",
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": -1,
+            "username": "system",
+            "name": "system",
+            "avatar_template": "/user_avatar/users.rust-lang.org/system/{size}/51372_2.png",
+            "admin": true,
+            "moderator": true,
+            "trust_level": 4
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": 7317,
+            "username": "chrisd",
+            "name": "",
+            "avatar_template": "/user_avatar/users.rust-lang.org/chrisd/{size}/11859_2.png",
+            "trust_level": 2
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "You can now highlight your code blocks on GitHub using the rs alias!",
+      "id": 60569,
+      "title": "You can now highlight your code blocks on GitHub using the rs alias!",
+      "slug": "you-can-now-highlight-your-code-blocks-on-github-using-the-rs-alias",
+      "posts_count": 1,
+      "reply_count": 0,
+      "highest_post_number": 1,
+      "image_url": null,
+      "created_at": "2021-06-01T12:56:38.728Z",
+      "last_posted_at": "2021-06-01T12:56:39.188Z",
+      "bumped": true,
+      "bumped_at": "2021-06-01T13:17:44.410Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 5,
+      "views": 528,
+      "category_id": 6,
+      "featured_link": null,
+      "op_like_count": 5,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 22646,
+            "username": "r00ster91",
+            "name": "r00ster",
+            "avatar_template": "/user_avatar/users.rust-lang.org/r00ster91/{size}/21419_2.png",
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": -1,
+            "username": "system",
+            "name": "system",
+            "avatar_template": "/user_avatar/users.rust-lang.org/system/{size}/51372_2.png",
+            "admin": true,
+            "moderator": true,
+            "trust_level": 4
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "Could we change the forum\u0026rsquo;s CSS for displaying rust code?",
+      "id": 29697,
+      "title": "Could we change the forum's CSS for displaying rust code?",
+      "slug": "could-we-change-the-forums-css-for-displaying-rust-code",
+      "posts_count": 9,
+      "reply_count": 3,
+      "highest_post_number": 9,
+      "image_url": "https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/2X/c/c4fc971c0cc29ab110e4879dd2826f6ce83aef27.png",
+      "created_at": "2019-06-27T14:29:53.373Z",
+      "last_posted_at": "2019-06-30T19:40:14.381Z",
+      "bumped": true,
+      "bumped_at": "2019-06-30T19:40:14.381Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 10,
+      "views": 2326,
+      "category_id": 3,
+      "featured_link": null,
+      "op_like_count": 2,
+      "has_accepted_answer": false,
+      "posters": [
+        {
+          "extras": "latest",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 12405,
+            "username": "Keksoj",
+            "name": "Emmanuel Bosquet",
+            "avatar_template": "/user_avatar/users.rust-lang.org/keksoj/{size}/11556_2.png",
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 1288,
+            "username": "notriddle",
+            "name": "Michael Howell",
+            "avatar_template": "/user_avatar/users.rust-lang.org/notriddle/{size}/51307_2.png",
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 8649,
+            "username": "Finn",
+            "name": "Finn",
+            "avatar_template": "/user_avatar/users.rust-lang.org/finn/{size}/8050_2.png",
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": -1,
+            "username": "system",
+            "name": "system",
+            "avatar_template": "/user_avatar/users.rust-lang.org/system/{size}/51372_2.png",
+            "admin": true,
+            "moderator": true,
+            "trust_level": 4
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": 9904,
+            "username": "vmedea",
+            "name": "mara",
+            "avatar_template": "/user_avatar/users.rust-lang.org/vmedea/{size}/15128_2.png",
+            "trust_level": 2
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "Emoji in code blocks",
+      "id": 27472,
+      "title": "Emoji in code blocks",
+      "slug": "emoji-in-code-blocks",
+      "posts_count": 6,
+      "reply_count": 3,
+      "highest_post_number": 6,
+      "image_url": null,
+      "created_at": "2019-04-22T04:42:26.060Z",
+      "last_posted_at": "2019-04-22T07:49:59.533Z",
+      "bumped": true,
+      "bumped_at": "2019-04-22T07:49:59.533Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 1,
+      "views": 2208,
+      "category_id": 3,
+      "featured_link": null,
+      "op_like_count": 0,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": "latest",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 9449,
+            "username": "Cerber-Ursi",
+            "name": "",
+            "avatar_template": "/user_avatar/users.rust-lang.org/cerber-ursi/{size}/8315_2.png",
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster, Accepted Answer",
+          "user": {
+            "id": 8,
+            "username": "cuviper",
+            "name": "Josh Stone",
+            "avatar_template": "/user_avatar/users.rust-lang.org/cuviper/{size}/3156_2.png",
+            "trust_level": 3
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": -1,
+            "username": "system",
+            "name": "system",
+            "avatar_template": "/user_avatar/users.rust-lang.org/system/{size}/51372_2.png",
+            "admin": true,
+            "moderator": true,
+            "trust_level": 4
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": 6241,
+            "username": "NobbZ",
+            "name": "Norbert Melzer",
+            "avatar_template": "/user_avatar/users.rust-lang.org/nobbz/{size}/4499_2.png",
+            "trust_level": 2
+          }
+        }
+      ]
+    },
+    {
+      "fancy_title": "How to annotate code block as rust in markdown output of `rustc \u0026ndash;explain`?",
+      "id": 113014,
+      "title": "How to annotate code block as rust in markdown output of `rustc --explain`?",
+      "slug": "how-to-annotate-code-block-as-rust-in-markdown-output-of-rustc-explain",
+      "posts_count": 7,
+      "reply_count": 4,
+      "highest_post_number": 7,
+      "image_url": null,
+      "created_at": "2024-06-16T05:19:16.814Z",
+      "last_posted_at": "2024-06-18T08:40:43.985Z",
+      "bumped": true,
+      "bumped_at": "2024-06-18T08:40:43.985Z",
+      "archetype": "regular",
+      "unseen": false,
+      "pinned": false,
+      "unpinned": null,
+      "visible": true,
+      "closed": true,
+      "archived": false,
+      "bookmarked": null,
+      "liked": null,
+      "like_count": 6,
+      "views": 1050,
+      "category_id": 5,
+      "featured_link": null,
+      "op_like_count": 1,
+      "has_accepted_answer": true,
+      "posters": [
+        {
+          "extras": "latest",
+          "description": "Original Poster, Most Recent Poster",
+          "user": {
+            "id": 40211,
+            "username": "dlyongemallo",
+            "name": "David Yonge-Mallo",
+            "avatar_template": "/user_avatar/users.rust-lang.org/dlyongemallo/{size}/41339_2.png",
+            "trust_level": 0
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster, Accepted Answer",
+          "user": {
+            "id": 40162,
+            "username": "eljamm",
+            "name": "",
+            "avatar_template": "/user_avatar/users.rust-lang.org/eljamm/{size}/41289_2.png",
+            "trust_level": 1
+          }
+        },
+        {
+          "extras": null,
+          "description": "Frequent Poster",
+          "user": {
+            "id": 32545,
+            "username": "drewtato",
+            "name": "",
+            "avatar_template": "/user_avatar/users.rust-lang.org/drewtato/{size}/32949_2.png",
+            "trust_level": 2
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": -1,
+            "username": "system",
+            "name": "system",
+            "avatar_template": "/user_avatar/users.rust-lang.org/system/{size}/51372_2.png",
+            "admin": true,
+            "moderator": true,
+            "trust_level": 4
+          }
+        },
+        {
+          "extras": null,
+          "description": "Recent Poster",
+          "user": {
+            "id": 19423,
+            "username": "quinedot",
+            "name": "Quine Dot",
+            "avatar_template": "/user_avatar/users.rust-lang.org/quinedot/{size}/17693_2.png",
+            "trust_level": 4
+          }
+        }
+      ]
+    }
+  ],
+  "summarizable": false,
+  "has_cached_summary": false,
+  "can_assign": false,
+  "has_livestream": null,
+  "has_accepted_answer": false,
+  "can_create_shared_issue": false,
+  "shared_issue_visible": false,
+  "can_vote": false,
+  "vote_count": 0,
+  "user_voted": false,
+  "discourse_zendesk_plugin_zendesk_id": null,
+  "discourse_zendesk_plugin_zendesk_url": "https://your-url.zendesk.com/agent/tickets/",
+  "details": {
+    "can_edit": false,
+    "notification_level": 1,
+    "notifications_reason_id": null,
+    "can_invite_to": true,
+    "can_reply_as_new_topic": true,
+    "can_flag_topic": true,
+    "participants": [
+      {
+        "id": 7317,
+        "username": "chrisd",
+        "name": "",
+        "avatar_template": "/user_avatar/users.rust-lang.org/chrisd/{size}/11859_2.png",
+        "post_count": 2,
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_color": null,
+        "flair_bg_color": null,
+        "flair_group_id": null,
+        "trust_level": 2
+      },
+      {
+        "id": 3932,
+        "username": "Ixrec",
+        "name": "Ixrec",
+        "avatar_template": "/user_avatar/users.rust-lang.org/ixrec/{size}/15209_2.png",
+        "post_count": 1,
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_color": null,
+        "flair_bg_color": null,
+        "flair_group_id": null,
+        "trust_level": 2
+      },
+      {
+        "id": 10869,
+        "username": "alice",
+        "name": "Alice Ryhl",
+        "avatar_template": "/user_avatar/users.rust-lang.org/alice/{size}/9777_2.png",
+        "post_count": 1,
+        "primary_group_name": null,
+        "flair_name": null,
+        "flair_url": null,
+        "flair_color": null,
+        "flair_bg_color": null,
+        "flair_group_id": null,
+        "trust_level": 4
+      }
+    ],
+    "created_by": {
+      "id": 7317,
+      "username": "chrisd",
+      "name": "",
+      "avatar_template": "/user_avatar/users.rust-lang.org/chrisd/{size}/11859_2.png"
+    },
+    "last_poster": {
+      "id": 7317,
+      "username": "chrisd",
+      "name": "",
+      "avatar_template": "/user_avatar/users.rust-lang.org/chrisd/{size}/11859_2.png"
+    },
+    "links": [
+      {
+        "url": "https://commonmark.org/help/",
+        "title": "Markdown Reference",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 152,
+        "user_id": 3932,
+        "domain": "commonmark.org",
+        "root_domain": "commonmark.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/remove-an-element-from-the-vector/43107/3",
+        "title": "Remove an element from the vector",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 78,
+        "user_id": 9449,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://meta.discourse.org/t/post-format-reference-documentation/19197",
+        "title": "Post format reference documentation - faq - Discourse Meta",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 46,
+        "user_id": 3932,
+        "domain": "meta.discourse.org",
+        "root_domain": "discourse.org"
+      },
+      {
+        "url": "https://github.github.com/gfm/",
+        "title": "GitHub Flavored Markdown Spec",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 30,
+        "user_id": 3932,
+        "domain": "github.github.com",
+        "root_domain": "github.com"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/how-to-print-value-of-a-pointer/46352/2",
+        "title": "How to print value of a pointer",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 27,
+        "user_id": 7317,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://spec.commonmark.org/current/",
+        "title": "Redirecting...",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 27,
+        "user_id": 3932,
+        "domain": "spec.commonmark.org",
+        "root_domain": "commonmark.org"
+      },
+      {
+        "url": "https://spec.commonmark.org/0.29/#fenced-code-blocks",
+        "title": "CommonMark Spec",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 25,
+        "user_id": 3932,
+        "domain": "spec.commonmark.org",
+        "root_domain": "commonmark.org"
+      },
+      {
+        "url": "https://guides.github.com/features/mastering-markdown/",
+        "title": "Mastering Markdown · GitHub Guides",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 24,
+        "user_id": 3932,
+        "domain": "guides.github.com",
+        "root_domain": "github.com"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/error-in-format/45815/3",
+        "title": "Error in Format!",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 20,
+        "user_id": 17606,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/help-with-multithreading-x-y-axis-manipulation/44021/3",
+        "title": "Help with multithreading - x/y axis manipulation",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 18,
+        "user_id": 6406,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/how-to-parse-reqwest-response-json-to-a-struct/46373/2",
+        "title": "How to parse reqwest::blocking::response json to a struct",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 15,
+        "user_id": 10869,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://spec.commonmark.org/0.29/#info-string",
+        "title": "CommonMark Spec",
+        "internal": false,
+        "attachment": false,
+        "reflection": false,
+        "clicks": 9,
+        "user_id": 3932,
+        "domain": "spec.commonmark.org",
+        "root_domain": "commonmark.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/strings-references-and-derefrences/132696/2",
+        "title": "Strings - References and Derefrences",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 4,
+        "user_id": 47694,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/how-to-call-a-raw-function-pointer-as-a-struct-member-wrapped-by-option/59310/2",
+        "title": "How to call a raw function pointer as a struct member wrapped by option",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 2,
+        "user_id": 15966,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/why-am-i-not-allowed-to-copy-part-of-a-list-filled-with-i32-to-another-variable/44887/10",
+        "title": "Why am I not allowed to copy part of a list filled with i32 to another variable?",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 9449,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/confusion-as-a-new-rustacean/43499/2",
+        "title": "Confusion as a new rustacean",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 10869,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/help-piece-of-code-it-doesnt-work-for-me/89474/2",
+        "title": "Help piece of code?, it doesn't work for me",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 23449,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/how-can-i-improve-this-code/122869/3",
+        "title": "How can I improve this code?",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 16551,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/i-want-to-break-out-of-loop-when-0-occurs-4-times-or-1-occurs-3-times-baseball-balls-and-strikes/70060/2",
+        "title": "I want to break out of loop when 0 occurs 4 times or 1 occurs 3 times (baseball balls and strikes)",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 10869,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/pass-function-closure-to-thread/45574/2",
+        "title": "Pass function closure to thread",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 14545,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/python-to-rust-code-converter/47801/2",
+        "title": "Python to Rust Code converter",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 6406,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      },
+      {
+        "url": "https://users.rust-lang.org/t/std-from-mime-mime-is-implemented-for-mut-str-but-not-for-str/44271/3",
+        "title": "`std::convert::From\u003cmime::Mime\u003e` is implemented for `\u0026mut str`, but not for `\u0026str`",
+        "internal": true,
+        "attachment": false,
+        "reflection": true,
+        "clicks": 1,
+        "user_id": 6406,
+        "domain": "users.rust-lang.org",
+        "root_domain": "rust-lang.org"
+      }
+    ]
+  },
+  "pending_posts": [],
+  "bookmarks": []
+}

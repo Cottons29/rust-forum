@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=RustForum
+Comment=RustForum
+Exec=RustForum
+Icon=RustForum
+Terminal=false
+Type=Application
+Categories=Utility;

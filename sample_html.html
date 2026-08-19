@@ -1,0 +1,131 @@
+<p>Other Rust websites support turning the logo to white in dark mode. Could this be added to the forum too?</p><p>
+<div class="lightbox-wrapper"><a class="lightbox"
+                                 href="https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/3X/0/2/02dbcf992d6cfe365a3ddc18fc646f8c9e12382a.png"
+                                 data-download-href="/uploads/short-url/phTEIm2VQsZERgWQxj1Krv28LE.png?dl=1"
+                                 title="Light mode: forum logo is black on light background"
+                                 rel="noopener nofollow ugc"><img
+        src="https://us1.discourse-cdn.com/flex019/uploads/rust_lang/optimized/3X/0/2/02dbcf992d6cfe365a3ddc18fc646f8c9e12382a_2_690x185.png"
+        alt="Light mode: forum logo is black on light background" data-base62-sha1="phTEIm2VQsZERgWQxj1Krv28LE"
+        width="690" height="185"
+        srcset="https://us1.discourse-cdn.com/flex019/uploads/rust_lang/optimized/3X/0/2/02dbcf992d6cfe365a3ddc18fc646f8c9e12382a_2_690x185.png, https://us1.discourse-cdn.com/flex019/uploads/rust_lang/optimized/3X/0/2/02dbcf992d6cfe365a3ddc18fc646f8c9e12382a_2_1035x277.png 1.5x, https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/3X/0/2/02dbcf992d6cfe365a3ddc18fc646f8c9e12382a.png 2x"
+        data-dominant-color="E6E6E8">
+    <div class="meta">
+        <svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true">
+            <use href="#far-image"></use>
+        </svg>
+        <span class="filename">Light mode: forum logo is black on light background</span><span class="informations">1254×338 33 KB</span>
+        <svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true">
+            <use href="#discourse-expand"></use>
+        </svg>
+    </div>
+</a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox"
+                                 href="https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/3X/e/d/ed7c87e25d4640ca9f18b750e241e7a9fdb4935a.png"
+                                 data-download-href="/uploads/short-url/xSTXVe3NWJCIcjcY6ErBimNkhe2.png?dl=1"
+                                 title="Dark mode: forum logo is still black on dark background; other sites turn logo to white"
+                                 rel="noopener nofollow ugc"><img
+        src="https://us1.discourse-cdn.com/flex019/uploads/rust_lang/optimized/3X/e/d/ed7c87e25d4640ca9f18b750e241e7a9fdb4935a_2_690x188.png"
+        alt="Dark mode: forum logo is still black on dark background; other sites turn logo to white"
+        data-base62-sha1="xSTXVe3NWJCIcjcY6ErBimNkhe2" width="690" height="188"
+        srcset="https://us1.discourse-cdn.com/flex019/uploads/rust_lang/optimized/3X/e/d/ed7c87e25d4640ca9f18b750e241e7a9fdb4935a_2_690x188.png, https://us1.discourse-cdn.com/flex019/uploads/rust_lang/optimized/3X/e/d/ed7c87e25d4640ca9f18b750e241e7a9fdb4935a_2_1035x282.png 1.5x, https://us1.discourse-cdn.com/flex019/uploads/rust_lang/original/3X/e/d/ed7c87e25d4640ca9f18b750e241e7a9fdb4935a.png 2x"
+        data-dominant-color="323136">
+    <div class="meta">
+        <svg class="fa d-icon d-icon-far-image svg-icon" aria-hidden="true">
+            <use href="#far-image"></use>
+        </svg>
+        <span class="filename">Dark mode: forum logo is still black on dark background; other sites turn logo to white</span><span
+            class="informations">1252×342 29.5 KB</span>
+        <svg class="fa d-icon d-icon-discourse-expand svg-icon" aria-hidden="true">
+            <use href="#discourse-expand"></use>
+        </svg>
+    </div>
+</a></div></p>
+
+
+<!--This is Another HTML-->
+
+
+<p>before i decide to making it i went shopping on <a href="http://crates.io" rel="noopener nofollow ugc">crates.io</a>
+    first, here is my feeling:</p><p><strong>egui</strong>: easy to write, no architecture to fight, just call and
+    draw. but i have issue with the state management.<br><strong>iced</strong>: i am really not good with Elm's
+    style.<br><strong>gpui</strong>:
+    in the last two years, it has less documents, i need to find the example at the Zed's source
+    code.<br><strong>dioxus</strong>:
+    it's cross platform and declarative ui style but with macro, also i have to "fighting" wtih my IDE when i missing
+    one '}'.<br><strong>slint</strong>: i need to learn another DSL for writting the UI, but their hot-reload is
+    really nice.</p><p>My development is started when i found <code>skia-safe</code> at <a href="http://crates.io"
+                                                                                           rel="noopener nofollow ugc">crates.io</a>,
+    but later on i meet the problem with cross-platform compilation, so i decide to write my own render engine using
+    wgpu.</p><p>After almost one year of development, i have get the benefit from the Rust's trait and type system, my
+    ui can be declare with builder pattern like this:</p>
+<pre data-code-wrap="rust"><code class="lang-rust">fn main() {  AimerApp::start(     Container::new()        .child(           Text::new("Hello World!")             .text_align(TextAlign::MidCenter)             .text_style(TextStyle::new().color(Color::BLACK)),      ),   )}</code></pre>
+<p>I really satisfy with building pattern, i have using it to build my first website into WebAssembly and rendering
+    inside the H5Canvas powered by WebGPU or WebGL.</p><p>here is my website <a href="https://aimers.dev"
+                                                                                rel="noopener nofollow ugc">aimers.dev</a>
+</p>
+<aside class="onebox githubrepo" data-onebox-src="https://github.com/Cottons29/aimer">
+    <header class="source"><a href="https://github.com/Cottons29/aimer" target="_blank"
+                              rel="noopener nofollow ugc">github.com</a>
+    </header>
+
+    <article class="onebox-body">
+        <div class="github-row" data-github-private-repo="false"><img width="690" height="344"
+                                                                      src="https://opengraph.githubassets.com/485bf7c2ae81855fd5009a8d33858cfb/Cottons29/aimer"
+                                                                      class="thumbnail">
+            <h3><a
+                    href="https://github.com/Cottons29/aimer" target="_blank" rel="noopener nofollow ugc">GitHub -
+                Cottons29/aimer: A rust-implemented cross-platform app framework</a></h3>
+            <p><span
+                    class="github-repo-description">A rust-implemented cross-platform app framework</span></p>
+        </div>
+
+    </article>
+
+    <div class="onebox-metadata"></div>
+
+    <div style="clear: both"></div>
+
+</aside>
+
+
+<!--Another Blog To Do-->
+
+<!--Another Problem Blog-->
+
+<p>I'm working on an interpreter in Rust, following along with the <em>Crafting Interpreters</em> book. This is my
+    second Rust project, and it's still very much a work in progress.</p><p>I don't want to take up too much of your
+    time, but if anyone has a moment to take a look and share some feedback, I'd really appreciate it.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://git.kaanbora.dev/kaan-rs/buhran-rs">
+    <header class="source"><img src="https://git.kaanbora.dev/assets/img/favicon.svg" class="site-icon" alt=""
+                                width="32" height="32"> <a href="https://git.kaanbora.dev/kaan-rs/buhran-rs"
+                                                           target="_blank" rel="noopener nofollow ugc">Forgejo:
+        Beyond coding. We Forge.</a>
+    </header>
+
+    <article class="onebox-body">
+        <div class="aspect-image" style="--aspect-ratio:690/344;"><img
+                src="https://git.kaanbora.dev/kaan-rs/buhran-rs/-/summary-card" class="thumbnail" alt="" width="690"
+                height="345"></div>
+        <h3><a href="https://git.kaanbora.dev/kaan-rs/buhran-rs" target="_blank"
+               rel="noopener nofollow ugc">buhran-rs</a>
+        </h3>
+        <p>🥳 buhran is a Rust learning project that follows the implementation path from Crafting
+            Interpreters. It is currently building the scanner and tokenization foundation for a Lox-style
+            interpreter.</p>
+    </article>
+
+    <div class="onebox-metadata"></div>
+
+    <div style="clear: both"></div>
+
+</aside>
+<p>Thanks</p><p><em>A few notes:</em></p><p><em>I'm a hobbyist programmer. I had a brief period of
+    professional experience, but I realized it was taking the joy out of programming for me, so I stepped back and kept
+    it as a hobby instead. My goal is simply to get as good as I can at Rust and compilers.</em></p><p><em>This is
+    also actually my first real experience with Git I'm still learning things like CI/CD as I go, so please bear with me
+    if anything looks unconventional.</em></p><p><em>On the name: "buhran" means "crisis" (or "depression" in the
+    emotional sense) in Turkish. I chose it because it has personal significance to me from this period of my life. I'm
+    not sure how much it matters to anyone else, but it means something to me.</em></p><p><em>I've also tried to keep
+    AI assistance to a minimum throughout this project mainly using it for feedback and discussions on how to make the
+    code more idiomatic, rather than having it write the code for me.</em></p><p><em><strong>One more thing the tool
+    that helped me the most throughout this project was honestly just Clippy.</strong></em></p>

@@ -1,0 +1,23 @@
+[package]
+name = "RustForum"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "src/main.rs"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+aimer = { git="https://github.com/Cottons29/aimer", branch = "1.97.1-alpha-3", features = ["provider", "markdown", "markdown-arborium", "svg"] }
+serde = { version = "1.0.229", features = ["derive", "rc"] }
+serde_json = "1.0.151"
+reqwest = { version = "0.13.4", default-features = false, features = ["native-tls", "http2"] }
+htmd = "0.5.5"
+markup5ever_rcdom = "0.38"
+webbrowser = "1.2.4"
+[dev-dependencies]
+tokio = { version = "1.53.1", features = ["io-util", "macros", "net", "rt-multi-thread"] }
+
+
+[profile.dev]
+debug = "line-tables-only"
