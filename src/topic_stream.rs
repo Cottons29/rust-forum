@@ -1,5 +1,10 @@
 use crate::api::BASE_URL;
-use crate::models::Topic;
+use crate::models::comments::avatar_url;
+use crate::models::{Author, Topic, User};
+
+/// The pixel size topic-list avatars are requested at (drawn at half this on
+/// screen, for sharpness on high-density displays).
+const AUTHOR_AVATAR_SIZE: u32 = 48;
 
 /// Incrementally scans a Discourse JSON response for the `topic_list.topics`
 /// array and yields each complete topic object as a raw JSON string. This lets
@@ -7,11 +12,30 @@ use crate::models::Topic;
 /// waiting for the whole document.
 pub struct TopicStreamParser {
     found_array: bool,
+    /// The response's `users`, which Discourse sends ahead of the topics.
+    users: Vec<User>,
 }
 
 impl TopicStreamParser {
     pub fn new() -> Self {
-        Self { found_array: false }
+        Self {
+            found_array: false,
+            users: Vec::new(),
+        }
+    }
+
+    /// The user who started `topic`: its original poster, else its first one.
+    pub fn author_of(&self, topic: &Topic) -> Option<Author> {
+        let poster = topic
+            .posters
+            .iter()
+            .find(|poster| poster.description.contains("Original Poster"))
+            .or_else(|| topic.posters.first())?;
+        let user = self.users.iter().find(|user| user.id == poster.user_id)?;
+        Some(Author {
+            username: user.username.clone(),
+            avatar_url: avatar_url(&user.avatar_template, AUTHOR_AVATAR_SIZE),
+        })
     }
 
     /// Feeds the accumulated `buffer` and returns every topic object that is
@@ -30,6 +54,7 @@ impl TopicStreamParser {
                 let Some(rel) = buffer[key..].iter().position(|&b| b == b'[') else {
                     break;
                 };
+                self.users = parse_users(&buffer[..key]);
                 buffer.drain(..=key + rel);
                 self.found_array = true;
                 continue;
@@ -53,10 +78,7 @@ impl TopicStreamParser {
 /// Streams the topics of a Discourse path such as `latest.json` or
 /// `c/{slug}/{id}.json`, invoking `on_topic` for each topic as soon as its
 /// object is fully received.
-pub async fn stream_topics(
-    path: &str,
-    mut on_topic: impl FnMut(Topic),
-) -> Result<(), String> {
+pub async fn stream_topics(path: &str, mut on_topic: impl FnMut(Topic)) -> Result<(), String> {
     let client = reqwest::Client::new();
     let url = format!("{BASE_URL}/{path}");
     let mut response = client.get(url).send().await.map_err(|e| e.to_string())?;
@@ -78,13 +100,36 @@ pub async fn stream_topics(
     while let Some(chunk) = response.chunk().await.map_err(|e| e.to_string())? {
         buffer.extend_from_slice(&chunk);
         for json in parser.poll(&mut buffer) {
-            if let Ok(topic) = serde_json::from_str::<Topic>(&json) {
+            if let Ok(mut topic) = serde_json::from_str::<Topic>(&json) {
+                topic.author = parser.author_of(&topic);
                 on_topic(topic);
             }
         }
     }
 
     Ok(())
+}
+
+/// Reads the `users` array out of the text that precedes `topic_list`.
+fn parse_users(prefix: &[u8]) -> Vec<User> {
+    let Some(key) = find_subslice(prefix, b"\"users\":") else {
+        return Vec::new();
+    };
+    let Some(rel) = prefix[key..].iter().position(|&b| b == b'[') else {
+        return Vec::new();
+    };
+    let start = key + rel;
+    let Some(end) = find_object_end(&prefix[start..]) else {
+        return Vec::new();
+    };
+    let Ok(values) = serde_json::from_slice::<Vec<serde_json::Value>>(&prefix[start..=start + end])
+    else {
+        return Vec::new();
+    };
+    values
+        .into_iter()
+        .filter_map(|value| serde_json::from_value(value).ok())
+        .collect()
 }
 
 /// Finds `needle` in `haystack`, returning its start index.
@@ -135,6 +180,7 @@ fn find_object_end(bytes: &[u8]) -> Option<usize> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::models::Poster;
 
     fn topics_object() -> Vec<String> {
         let mut parser = TopicStreamParser::new();
@@ -181,6 +227,29 @@ mod tests {
         let topics = parser.poll(&mut buffer);
         assert_eq!(topics.len(), 1);
         assert!(topics[0].starts_with("{\"id\":1"));
+    }
+
+    #[test]
+    fn resolves_a_topics_author_from_the_users_ahead_of_it() {
+        let mut parser = TopicStreamParser::new();
+        let mut buffer = br#"{"users":[{"id":7,"username":"ferris","avatar_template":"/user_avatar/x/ferris/{size}/1.png","trust_level":1}],"topic_list":{"topics":[{"id":1}]}}"#.to_vec();
+        assert_eq!(parser.poll(&mut buffer).len(), 1);
+
+        let poster = |description: &str, user_id| Poster {
+            description: description.to_string(),
+            user_id,
+            ..Default::default()
+        };
+        let topic = Topic {
+            posters: vec![
+                poster("Frequent Poster", 9),
+                poster("Original Poster, Most Recent Poster", 7),
+            ],
+            ..Default::default()
+        };
+        let author = parser.author_of(&topic).unwrap();
+        assert_eq!(author.username, "ferris");
+        assert!(author.avatar_url.ends_with("/user_avatar/x/ferris/48/1.png"));
     }
 
     #[test]

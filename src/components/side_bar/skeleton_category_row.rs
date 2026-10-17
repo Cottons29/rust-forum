@@ -1,13 +1,12 @@
 use std::time::Duration;
 
 use crate::theme::ForumTheme;
-use aimer::animation::{AnimatedBuilder, AnimationController, Curve};
+use aimer::animation::{curves, AnimatedBuilder, AnimationController};
 use aimer::style::{BoxDecoration, LayoutSpacing, Theme};
 use aimer::{
     AnyWidget, BoxAlignment, BuildContext, Color, Container, Dimension, Row, SizedBox,
     StatelessWidget, Widget, ZeroSizedBox,
 };
-use crate::components::skeleton_topic_card::CARD_HEIGHT;
 
 const PULSE_CYCLE: Duration = Duration::from_millis(1000);
 const SWATCH_SIZE: f32 = 12.0;
@@ -24,7 +23,7 @@ pub struct SkeletonCategoryRow {
 
 impl SkeletonCategoryRow {
     pub fn new() -> Self {
-        let controller = AnimationController::new(PULSE_CYCLE, Curve::EaseInOut);
+        let controller = AnimationController::new(PULSE_CYCLE, curves::EASE_IN_OUT);
         controller.set_repeat(true);
         controller.set_auto_reverse(true);
         controller.forward_from_first_tick();
@@ -41,8 +40,7 @@ impl StatelessWidget for SkeletonCategoryRow {
             let tone = theme.primary_color().with_brightness(1.2);
             let bar = tone.with_alpha(0.12).lerp(tone.with_alpha(0.3), value);
 
-            Container::new()
-                .padding(LayoutSpacing::vertical(12)).child(
+            Container::new().padding(LayoutSpacing::vertical(12)).child(
                 Row::new()
                     .vertical_alignment(BoxAlignment::Center)
                     .gaps(LayoutSpacing::all(10))

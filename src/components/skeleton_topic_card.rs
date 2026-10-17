@@ -1,15 +1,15 @@
 use std::time::Duration;
 
+use crate::components::topic_card::divider_decor;
 use crate::theme::ForumTheme;
-use aimer::animation::{AnimatedBuilder, AnimationController, Curve};
-use aimer::style::{BorderSlice, BorderStyle, BoxBorder, BoxDecoration, LayoutSpacing, Theme};
+use aimer::animation::{AnimatedBuilder, AnimationController, curves};
+use aimer::style::{BoxDecoration, LayoutSpacing, Theme};
 use aimer::{
-    BuildContext, Color, Column, Container, Dimension, JustifyContent, StatelessWidget, Widget,
-    ZeroSizedBox,
+    AnyWidget, BoxAlignment, BuildContext, Color, Column, Container, Dimension, Expanded, Row,
+    SizedBox, StatelessWidget, Widget, ZeroSizedBox,
 };
 
-const PULSE_CYCLE: Duration = Duration::from_millis(1000);
-pub(crate) const CARD_HEIGHT: f32 = 160.0;
+pub(crate) const PULSE_CYCLE: Duration = Duration::from_millis(1000);
 
 /// A grey placeholder that mirrors [`super::topic_card::TopicCard`]'s shape and
 /// pulses gently while the real topic streams in.
@@ -20,7 +20,7 @@ pub struct SkeletonTopicCard {
 
 impl SkeletonTopicCard {
     pub fn new() -> Self {
-        let controller = AnimationController::new(PULSE_CYCLE, Curve::EaseInOut);
+        let controller = AnimationController::new(PULSE_CYCLE, curves::EASE_IN_OUT);
         controller.set_repeat(true);
         controller.set_auto_reverse(true);
         controller.forward_from_first_tick();
@@ -34,26 +34,83 @@ impl StatelessWidget for SkeletonTopicCard {
         let controller = self.controller.clone();
 
         AnimatedBuilder::new(controller, move |value| {
-            let tone = theme.primary_color().with_brightness(1.1);
-            let bar = tone.with_alpha(0.12).lerp(tone.with_alpha(0.3), value);
+            let bar = pulse_color(theme, value);
 
             Container::new()
-                .height(CARD_HEIGHT)
                 .width(Dimension::Auto)
-                .box_decoration(theme.box_decor_with_color(bar))
+                .box_decoration(divider_decor(theme))
                 .child(
-                    Container::new().padding(LayoutSpacing::all(24)).child(
-                        Column::new()
-                            .justify_content(JustifyContent::SpaceBetween)
-                            .gaps(LayoutSpacing::all(10))
-                            .children([bar_widget(bar, 24.0, 80.0), bar_widget(bar, 16.0, 45.0)]),
+                    Container::new().padding(LayoutSpacing::all(20)).child(
+                        Column::new().gaps(LayoutSpacing::all(12)).children([
+                            header_row(bar),
+                            bar_widget(bar, 22.0, 80.0).boxed(),
+                            bar_widget(bar, 16.0, 100.0).boxed(),
+                            bar_widget(bar, 16.0, 65.0).boxed(),
+                            footer_row(bar),
+                        ]),
                     ),
                 )
         })
     }
 }
 
-fn bar_widget(color: Color, height: f32, width_percent: f32) -> impl Widget {
+/// Mirrors the card's header: a round badge and a short name.
+fn header_row(color: Color) -> AnyWidget {
+    Row::new()
+        .vertical_alignment(BoxAlignment::Center)
+        .gaps(LayoutSpacing::horizontal(8.into()))
+        .children([
+            Container::new()
+                .width(Dimension::Px(24.0))
+                .height(Dimension::Px(24.0))
+                .box_decoration(
+                    BoxDecoration::new()
+                        .background_color(color)
+                        .border_radius(12),
+                )
+                .child(ZeroSizedBox)
+                .boxed(),
+            bar_px(color, 14.0, 110.0),
+        ])
+        .boxed()
+}
+
+/// Mirrors the card's footer: two counts on the left, one on the right.
+fn footer_row(color: Color) -> AnyWidget {
+    Row::new()
+        .vertical_alignment(BoxAlignment::Center)
+        .gaps(LayoutSpacing::horizontal(20.into()))
+        .children([
+            bar_px(color, 16.0, 44.0),
+            bar_px(color, 16.0, 44.0),
+            Expanded::new().box_child(SizedBox::new()),
+            bar_px(color, 16.0, 44.0),
+        ])
+        .boxed()
+}
+
+/// The color of a placeholder `value` of the way through its pulse, `0.0` to `1.0`.
+pub(crate) fn pulse_color(theme: ForumTheme, value: f32) -> Color {
+    let tone = theme.primary_color().with_brightness(1.1);
+    tone.with_alpha(0.12).lerp(tone.with_alpha(0.3), value)
+}
+
+/// A placeholder bar of a fixed width.
+pub(crate) fn bar_px(color: Color, height: f32, width: f32) -> AnyWidget {
+    Container::new()
+        .height(Dimension::Px(height))
+        .width(Dimension::Px(width))
+        .box_decoration(
+            BoxDecoration::new()
+                .background_color(color)
+                .border_radius(6),
+        )
+        .child(ZeroSizedBox)
+        .boxed()
+}
+
+/// A placeholder bar that is `width_percent` of the width it is given.
+pub(crate) fn bar_widget(color: Color, height: f32, width_percent: f32) -> impl Widget {
     Container::new()
         .height(Dimension::Px(height))
         .width(Dimension::Percent(width_percent))

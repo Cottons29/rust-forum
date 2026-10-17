@@ -19,13 +19,14 @@ use aimer::*;
 // this is the entry point of the app
 #[aimer::main]
 fn main() {
+    // String::type_id(;)
 
     AimerApp::new()
         .window(
             WindowAttr::new()
                 .title("Rust Forum")
-                .inner_size(1240, 780)
-                .min_inner_size(900, 620),
+                .inner_size(450, 780)
+//                .min_inner_size(900, 620),
         )
         .setup(|| {
             MacosWindowing::new()
@@ -38,6 +39,7 @@ fn main() {
                 .install();
         })
         .child(
+            // take this
             Provider::new()
                 .create(AppStore::default)
                 .child(Navigator::new(AppRouter::Latest, |r| r.boxed())),

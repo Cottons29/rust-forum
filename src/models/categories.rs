@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use std::rc::Rc;
 
 /// Response from `categories.json`: the forum's category list.
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -12,7 +13,7 @@ pub struct CategoryRoot {
 pub struct CategoryList {
     pub can_create_category: bool,
     pub can_create_topic: bool,
-    pub categories: Vec<Category>,
+    pub categories: Vec<Rc<Category>>,
 }
 
 /// One forum category. Discourse's `categories.json` uses snake_case keys, so

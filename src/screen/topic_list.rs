@@ -1,19 +1,21 @@
+use crate::app_shell::is_mobile;
 use std::time::Duration;
 
+use crate::components::page_title::PageTitle;
 use crate::components::skeleton_topic_card::SkeletonTopicCard;
 use crate::components::topic_card::TopicCard;
 use crate::models::Topic;
 use crate::store::{AppStore, StreamStatus, TopicStream};
 use crate::theme::ForumTheme;
 use crate::topic_stream::stream_topics;
-use aimer::animation::{AnimatedSwitcher, Curve};
+use aimer::animation::{AnimatedSwitcher, curves};
+use aimer::share::{ShareRef, Shared};
 use aimer::style::{LayoutSpacing, TextStyle, Theme};
 use aimer::{
     AnyWidget, AsyncBuilder, BuildContext, Column, Container, Expanded, FontWeight,
     ProviderContext, ProviderHandle, Scrollable, SizedBox, StatelessWidget, Text, Widget,
-    ZeroSizedBox,
+    ZeroSizedBox, case
 };
-use crate::components::page_title::PageTitle;
 
 const TRANSITION_DURATION: Duration = Duration::from_millis(250);
 
@@ -22,12 +24,12 @@ const TRANSITION_DURATION: Duration = Duration::from_millis(250);
 /// one-by-one as they arrive instead of waiting for the whole document.
 #[derive(StatelessWidget, Clone)]
 pub struct TopicListScreen {
-    path: String,
-    title: String,
+    path: ShareRef<str>,
+    title: ShareRef<str>,
 }
 
 impl TopicListScreen {
-    pub fn new(path: String, title: String) -> Self {
+    pub fn new(path: ShareRef<str>, title: ShareRef<str>) -> Self {
         Self { path, title }
     }
 }
@@ -36,6 +38,7 @@ impl StatelessWidget for TopicListScreen {
     fn build(&self, ctx: &BuildContext) -> impl Widget {
         let theme = *ForumTheme::of(ctx);
         let store = ProviderHandle::<AppStore>::of(ctx);
+        let category_store = store.clone();
         let path = self.path.clone();
         let stream = ctx.select::<AppStore, TopicStream>({
             let path = path.clone();
@@ -49,8 +52,9 @@ impl StatelessWidget for TopicListScreen {
         };
         let content = AnimatedSwitcher::new(
             TRANSITION_DURATION,
-            Curve::EaseInOut,
+            curves::EASE_IN_OUT,
             Column::new().children([
+                SizedBox::new().height(case!(is_mobile(ctx), 60)).boxed(),
                 PageTitle::new(self.title.clone()).boxed(),
                 SizedBox::new().height(16).boxed(),
                 stream_content(stream, theme),
@@ -70,6 +74,16 @@ impl StatelessWidget for TopicListScreen {
             })
             .child(|_| ZeroSizedBox.boxed());
 
+        // The cards name their category from the store. The sidebar fills it,
+        // but it is not built on mobile, so load the categories here too.
+        let categories_driver = AsyncBuilder::new()
+            .key("topic-list-categories")
+            .future(move || {
+                let store = category_store.clone();
+                async move { load_categories(store).await }
+            })
+            .child(|_| ZeroSizedBox.boxed());
+
         // Text::new(self.title.clone())
         //     .text_style(TextStyle::new().font_size(32).font_weight(FontWeight::Bold))
         //     .boxed(),
@@ -77,6 +91,7 @@ impl StatelessWidget for TopicListScreen {
         Container::new().color(theme.background_color()).child(
             Column::new().children([
                 driver.boxed(),
+                categories_driver.boxed(),
                 Expanded::new()
                     .child(
                         Scrollable::new()
@@ -89,7 +104,20 @@ impl StatelessWidget for TopicListScreen {
     }
 }
 
-async fn stream_topics_task(store: ProviderHandle<AppStore>, path: String) -> Result<(), String> {
+/// Fills the store's categories unless they are already there.
+async fn load_categories(store: ProviderHandle<AppStore>) -> Result<(), String> {
+    if !store.read().categories.is_empty() {
+        return Ok(());
+    }
+    let root = AppStore::fetch_categories().await?;
+    store.update(|s| s.cache_categories(&root.category_list.categories));
+    Ok(())
+}
+
+async fn stream_topics_task(
+    store: ProviderHandle<AppStore>,
+    path: ShareRef<str>,
+) -> Result<(), String> {
     // A path that finished streaming before is already in the store; don't
     // re-fetch it.
     if store.read().topic_stream(&path).status == StreamStatus::Done {
@@ -97,16 +125,14 @@ async fn stream_topics_task(store: ProviderHandle<AppStore>, path: String) -> Re
     }
 
     let store_for_stream = store.clone();
-    let path_for_push = path.clone();
-    let result = stream_topics(&path, move |topic| {
-        let path = path_for_push.clone();
-        store_for_stream.update(move |s| s.push_stream_topic(path, topic));
+    let result = stream_topics(&path, |topic| {
+        store_for_stream.update(|s| s.push_stream_topic(path.clone(), topic));
     })
     .await;
 
     match result {
-        Ok(()) => store.update(|s| s.finish_stream(path.clone())),
-        Err(error) => store.update(|s| s.fail_stream(path.clone(), error)),
+        Ok(()) => store.update(|s| s.finish_stream(path)),
+        Err(error) => store.update(|s| s.fail_stream(path, error)),
     }
 
     Ok(())
@@ -126,20 +152,16 @@ fn skeleton_list() -> AnyWidget {
     Column::new()
         .list((0..6).collect::<Vec<usize>>())
         .builder(|_| {
-            Container::new()
-                .margin(LayoutSpacing::all(12))
-                .child(SkeletonTopicCard::new())
+            Container::new().child(SkeletonTopicCard::new())
         })
         .boxed()
 }
 
-fn topics_list(topics: Vec<Topic>) -> AnyWidget {
+fn topics_list(topics: Vec<Shared<Topic>>) -> AnyWidget {
     Column::new()
         .list(topics)
         .builder(|topic| {
-            Container::new()
-                .margin(LayoutSpacing::all(12))
-                .child(TopicCard::new(topic.clone()))
+            Container::new().child(TopicCard::new(topic.as_share_ref()))
         })
         .boxed()
 }

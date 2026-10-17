@@ -1,15 +1,17 @@
 use std::time::Duration;
 
+use crate::components::general_button::GeneralButton;
 use crate::router::AppRouter;
 use crate::theme::ForumTheme;
-use aimer::animation::Curve;
+use aimer::animation::curves;
 use aimer::router::NavigatorController;
 use aimer::style::{BoxDecoration, BoxShadow, LayoutSpacing, TextAlign, TextStyle, Theme};
 use aimer::{
-    Align, Anchor, AnchorHandle, AnyWidget, BoxAlignment, BuildContext, Button, Color, Column,
-    Container, Dimension, Floating, FloatingAlign, FloatingSide, ModalAnimation, ModalController,
-    Row, StatelessWidget, Text, Widget,
+    Align, AnyWidget, BoxAlignment, BuildContext, Color, Column, Container, Dimension, Row,
+    StatelessWidget, Text, Widget,
 };
+use aimer::input::button::Button;
+use aimer::modal::{Anchor, AnchorHandle, Floating, FloatingAlign, FloatingSide, ModalAnimation, ModalController};
 
 const AVATAR_SIZE: f32 = 28.0;
 const MENU_WIDTH: f32 = 220.0;
@@ -61,6 +63,50 @@ impl StatelessWidget for UserMenuButton {
                         ]),
                 ),
             );
+
+        Anchor::new().handle(anchor).child(button)
+    }
+}
+
+/// The user chip as a single circle, for the mobile pill. Pressing it opens the
+/// same account menu as [`UserMenuButton`], above the pill instead of below.
+#[derive(Clone, StatelessWidget)]
+pub struct UserAvatarButton {
+    size: f32,
+}
+
+impl UserAvatarButton {
+    pub fn new(size: f32) -> Self {
+        Self { size }
+    }
+}
+
+impl StatelessWidget for UserAvatarButton {
+    fn build(&self, ctx: &BuildContext) -> impl Widget {
+        let theme = *ForumTheme::of(ctx);
+        let navigator = NavigatorController::<AppRouter>::of(ctx);
+        let anchor = AnchorHandle::new();
+
+        let button = GeneralButton::with_child(
+            Container::new()
+                .width(Dimension::Px(self.size))
+                .height(Dimension::Px(self.size))
+                .child(Align::new().alignment(TextAlign::MidCenter).child(circular_avatar(theme))),
+            {
+                let anchor = anchor.clone();
+                move || {
+                    Floating::new()
+                        .anchor(anchor.clone())
+                        .side(FloatingSide::Top)
+                        .align(FloatingAlign::End)
+                        .gap(12.0)
+                        .animation(enter_animation())
+                        .child(menu_panel(theme, navigator.clone()))
+                        .show();
+                }
+            },
+        )
+        .width(self.size);
 
         Anchor::new().handle(anchor).child(button)
     }
@@ -147,12 +193,12 @@ fn menu_item(label: &'static str, theme: ForumTheme, on_select: impl Fn() + 'sta
                     Container::new()
                         .padding(LayoutSpacing::new().left(12))
                         .child(
-                        Text::new(label).text_align(TextAlign::MidLeft).text_style(
-                            TextStyle::new()
-                                .font_size(16)
-                                .color(theme.on_surface_color()),
+                            Text::new(label).text_align(TextAlign::MidLeft).text_style(
+                                TextStyle::new()
+                                    .font_size(16)
+                                    .color(theme.on_surface_color()),
+                            ),
                         ),
-                    ),
                 ),
         )
         .boxed()
@@ -163,7 +209,7 @@ fn enter_animation() -> ModalAnimation {
     ModalAnimation::new()
         .enter_duration(Duration::from_millis(160))
         .exit_duration(Duration::from_millis(120))
-        .enter_curve(Curve::EaseOut)
-        .exit_curve(Curve::EaseIn)
+        .enter_curve(curves::EASE_OUT)
+        .exit_curve(curves::EASE_IN)
         .content_scale_from(0.94)
 }

@@ -1,13 +1,13 @@
-use aimer::mouse_region::MouseRegion;
-use aimer::style::{BoxFit, LayoutSpacing, TextAlign, TextDecoration, TextStyle};
+use aimer::input::mouse_region::MouseRegion;
+use aimer::provider::media_query::MediaQuery;
+use aimer::style::{LayoutSpacing, TextAlign, TextStyle};
 use aimer::{
     Align, Alignment, AnyWidget, BuildContext, Color, Container, MarkdownCustomBlock,
-    MarkdownCustomBlockInput, MarkdownError, NetworkImage, Opacity, Position, Rubick, Stack, State,
-    StateUpdater, StatefulWidget, StatelessWidget, Text, Widget,
+    MarkdownCustomBlockInput, MarkdownError, NetworkImage, Opacity, Stack, State,
+    StateUpdater, StatefulWidget, Text, Widget,
 };
 use serde::{Deserialize, Serialize};
 use std::rc::Rc;
-use aimer::provider::media_query::MediaQuery;
 
 #[derive(StatefulWidget, Deserialize, Serialize)]
 pub struct LightBox {
@@ -72,12 +72,12 @@ impl State<LightBox> for LightBoxState {
 
     fn build(&self, ctx: &BuildContext) -> impl Widget {
         let updater = self.updater.clone();
-        let updater_2 = self.updater.clone();
         let window_size = MediaQuery::of(ctx);
-        let image_width_ratio = window_size.size.width / self.width as f32 / window_size.scale_factor * 1.3;
+        let image_width_ratio =
+            window_size.size.width / self.width as f32 / window_size.scale_factor * 1.3;
         MouseRegion::new()
-            .on_hover_enter(move || updater.clone().set_state(|state| state.is_hover = true))
-            .on_hover_exit(move || updater_2.clone().set_state(|state| state.is_hover = false))
+            .on_hover_enter(move || updater.set_state(|state| state.is_hover = true))
+            .on_hover_exit(move || updater.set_state(|state| state.is_hover = false))
             .child(
                 Container::new()
                     .height(self.height as f32 * image_width_ratio)

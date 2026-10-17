@@ -1,5 +1,5 @@
 use aimer::style::{BorderSlice, BorderStyle, BoxBorder, BoxDecoration};
-use aimer::{Color, Theme};
+use aimer::{Color, MarkdownTheme, Theme};
 
 /// Tomato-based app theme.
 ///
@@ -19,6 +19,7 @@ pub struct ForumTheme {
     accent_green: u8,
     accent_blue: u8,
     pub font_color: Color,
+
 }
 
 impl ForumTheme {
@@ -51,6 +52,7 @@ impl ForumTheme {
             accent_green: 122,
             accent_blue: 92,
             font_color: Color::WHITE,
+
         }
     }
 
@@ -105,13 +107,37 @@ impl ForumTheme {
     pub fn hover_box_decor(&self) -> BoxDecoration {
         self.box_decor()
             .clone()
-            .background_color(self.primary_color().with_opacity(30))
+            .background_color(self.primary_color().with_opacity(10))
             .border(BoxBorder::all(
                 BorderSlice::new()
                     .style(BorderStyle::Solid)
                     .stroke(2)
                     .color(self.primary_color()),
             ))
+    }
+
+    /// The Markdown styling that matches this theme.
+    pub fn markdown_theme(&self) -> MarkdownTheme {
+        let mut markdown = MarkdownTheme::default();
+        markdown.icon_color = self.primary_color().lighten(0.3);
+        markdown.body = markdown.body.color(self.font_color);
+        markdown.headings = markdown.headings.map(|style| style.color(self.font_color));
+        markdown.blockquote = markdown
+            .blockquote
+            .color(self.on_background_color().with_opacity(180));
+        markdown.code_block = markdown.code_block.color(self.on_surface_color());
+        markdown.inline_code = markdown
+            .inline_code
+            .color(self.on_surface_color())
+            .background_color(self.surface_color().darken(0.1).with_alpha(0.4));
+        markdown.link = markdown.link.color(self.primary_color());
+        markdown.link_hover_color = self.primary_color().lighten(0.2);
+        markdown.code_background = self.surface_color().darken(0.1).with_alpha(0.4);
+        markdown.quote_background = self.surface_color().darken(0.1).with_alpha(0.4);
+        markdown.rule_color = self.on_background_color().with_opacity(72);
+        markdown.table_header_background = self.surface_color();
+        markdown.table_cell_background = self.background_color();
+        markdown
     }
 
     pub fn on_primary_color(&self) -> Color {

@@ -1,9 +1,11 @@
 pub mod categories;
+pub mod comments;
 pub mod posts;
+pub mod user;
 
-use std::rc::Rc;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
+use std::rc::Rc;
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -111,6 +113,17 @@ pub struct Topic {
     pub unicode_title: Option<String>,
     #[serde(rename = "visibility_reason_id")]
     pub visibility_reason_id: Option<i64>,
+    /// Who started the topic, resolved from the list's `users` while streaming;
+    /// not part of Discourse's topic JSON.
+    #[serde(skip)]
+    pub author: Option<Author>,
+}
+
+/// The user who started a topic: a name and an avatar to draw beside it.
+#[derive(Default, Debug, Clone, PartialEq)]
+pub struct Author {
+    pub username: String,
+    pub avatar_url: String,
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

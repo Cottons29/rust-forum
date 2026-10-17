@@ -1,8 +1,16 @@
-pub mod light_box;
 mod handler_ext;
+pub mod light_box;
 pub mod link_card;
+pub mod quote_card;
 
 use crate::html_markdown::handler_ext::HTMLHandlerExt;
+use crate::html_markdown::light_box::LightBox;
+use crate::html_markdown::link_card::LinkCard;
+use crate::html_markdown::quote_card::QuoteCard;
+use crate::theme::ForumTheme;
+use aimer::share::Shared;
+use aimer::style::LayoutSpacing;
+use aimer::{AnyWidget, MarkdownViewer, Widget};
 use htmd::HtmlToMarkdown;
 use markup5ever_rcdom::{Node, NodeData};
 use std::rc::Rc;
@@ -163,13 +171,116 @@ fn build_converter() -> HtmlToMarkdown {
         .add_handler(vec!["pre"], HTMLHandlerExt::forum_lang_tag)
         .add_handler(vec!["div"], HTMLHandlerExt::light_box)
         .add_handler(vec!["aside"], HTMLHandlerExt::link_card)
+        // Registered after the link card handler so it sees `aside`s first and
+        // hands everything that isn't a quote on to it.
+        .add_handler(vec!["aside"], HTMLHandlerExt::quote)
+        .add_handler(vec!["img"], HTMLHandlerExt::filter_emoji)
         .build()
+}
+
+/// Renders forum Markdown, with the custom blocks `html_to_markdown` emits
+/// (link cards, lightboxes, quotes), at its natural height inside a page that
+/// scrolls on its own.
+pub fn forum_markdown(markdown: &str, theme: &ForumTheme, padding: LayoutSpacing) -> AnyWidget {
+    MarkdownViewer::new()
+        .typed_block::<LinkCard>()
+        .typed_block::<LightBox>()
+        .typed_block::<QuoteCard>()
+        .padding(padding)
+        .markdown(Shared::from(markdown))
+        .theme(theme.markdown_theme())
+        .scrollable(false)
+        .boxed()
 }
 
 pub fn html_to_markdown(input: &str) -> Rc<str> {
     let md = build_converter().convert(input).unwrap_or_default();
     let normalized = normalize_code_fences(&md);
     Rc::from(normalized)
+}
+
+/// Splits Markdown source into blocks separated by blank lines, keeping fenced
+/// code blocks (``` / ~~~) and `:::`-delimited custom blocks (link cards,
+/// lightboxes) intact so a multi-line block is never revealed in two halves.
+///
+/// Concatenating the returned blocks reproduces the source exactly, which lets
+/// the caller reveal the document one block at a time.
+pub fn markdown_blocks(source: &str) -> Vec<Rc<str>> {
+    let mut blocks: Vec<String> = Vec::new();
+    let mut current = String::new();
+    let mut fence: Option<char> = None;
+    let mut custom_depth = 0_usize;
+
+    for line in source.split_inclusive('\n') {
+        let trimmed = line.trim();
+
+        // Inside a fenced code block: only the matching closing fence ends it.
+        if let Some(f) = fence {
+            current.push_str(line);
+            if fence_char(trimmed) == Some(f) {
+                fence = None;
+                flush_block(&mut blocks, &mut current);
+            }
+            continue;
+        }
+
+        // Inside a `:::`-delimited custom block: a bare `:::` closes it.
+        if custom_depth > 0 {
+            current.push_str(line);
+            if trimmed == ":::" {
+                custom_depth -= 1;
+                if custom_depth == 0 {
+                    flush_block(&mut blocks, &mut current);
+                }
+            } else if trimmed.starts_with(":::") {
+                custom_depth += 1;
+            }
+            continue;
+        }
+
+        // A new fenced code block.
+        if let Some(f) = fence_char(trimmed) {
+            flush_block(&mut blocks, &mut current);
+            current.push_str(line);
+            fence = Some(f);
+            continue;
+        }
+
+        // A new custom block (e.g. `:::link-card`).
+        if trimmed.starts_with(":::") && trimmed != ":::" {
+            flush_block(&mut blocks, &mut current);
+            current.push_str(line);
+            custom_depth = 1;
+            continue;
+        }
+
+        if trimmed.is_empty() {
+            flush_block(&mut blocks, &mut current);
+        } else {
+            current.push_str(line);
+        }
+    }
+
+    flush_block(&mut blocks, &mut current);
+    blocks
+        .into_iter()
+        .map(|block| Rc::from(block.as_str()))
+        .collect()
+}
+
+/// Returns the fence character (` or ~) when `line` starts a fenced code block.
+fn fence_char(line: &str) -> Option<char> {
+    ['`', '~']
+        .into_iter()
+        .find(|&ch| line.starts_with(&ch.to_string().repeat(3)))
+}
+
+/// Moves `current` into `blocks` when it holds anything but whitespace.
+fn flush_block(blocks: &mut Vec<String>, current: &mut String) {
+    let block = std::mem::take(current);
+    if !block.trim().is_empty() {
+        blocks.push(block);
+    }
 }
 
 #[cfg(test)]
@@ -277,9 +388,7 @@ mod test {
     }
 
     #[test]
-    fn test_one_box() {
-
-    }
+    fn test_one_box() {}
 
     #[test]
     fn test_link_card() {
@@ -291,5 +400,83 @@ mod test {
             let md = build_converter().convert(html).unwrap();
             eprintln!("{md}");
         }
+    }
+
+    #[test]
+    fn test_inline_emoji_is_filtered_out() {
+        const HTML: &str = include_str!("../special_html/576751.html");
+
+        let md = build_converter().convert(HTML).unwrap();
+
+        assert!(
+            !md.contains("emoji.discourse-cdn.com"),
+            "emoji <img> elements should be dropped entirely, got:\n{md}"
+        );
+        assert!(
+            !md.contains("inline-emoji"),
+            "emoji <img> elements should be dropped entirely, got:\n{md}"
+        );
+
+        // Non-emoji content is left untouched.
+        assert!(md.contains("Could someone please explain how the flexibility around lifetimes"));
+        assert!(md.contains("```rust"));
+    }
+
+    const QUOTE_HTML: &str = r#"<aside class="quote no-group" data-username="stonerfish" data-post="20" data-topic="1" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img alt="" width="24" height="24" src="https://avatars.discourse-cdn.com/v4/letter/s/50afbb/48.png" class="avatar"> stonerfish:</div>
+<blockquote>
+<p>"Hey Claude, rewrite <code>rustc</code> for me."</p>
+</blockquote>
+</aside>
+<p>"And don't make any mistakes."</p>"#;
+
+    #[test]
+    fn test_quote_becomes_a_quote_block_with_its_avatar_inside() {
+        let md = super::html_to_markdown(QUOTE_HTML);
+
+        assert!(md.starts_with(":::forum-quote\n"), "got:\n{md}");
+        assert!(md.contains("\"username\":\"stonerfish\""), "got:\n{md}");
+        assert!(
+            md.contains("Hey Claude, rewrite `rustc` for me."),
+            "got:\n{md}"
+        );
+        // The avatar belongs to the quote header, not the body as a full image.
+        assert!(
+            !md.contains("!["),
+            "the avatar must not become an image, got:\n{md}"
+        );
+        assert!(md.contains("And don't make any mistakes."), "got:\n{md}");
+    }
+
+    #[test]
+    fn test_quote_inside_a_quote_stays_a_block_in_the_body() {
+        let html = format!(
+            r#"<aside class="quote" data-username="outer"><div class="title">outer:</div><blockquote>{QUOTE_HTML}<p>reply</p></blockquote></aside>"#
+        );
+        let md = super::html_to_markdown(&html);
+
+        let outer: super::QuoteCard = {
+            let json = md.lines().nth(1).expect("a JSON line");
+            serde_json::from_str(json).expect("the outer quote's JSON")
+        };
+        let body = serde_json::to_value(&outer).unwrap()["markdown"]
+            .as_str()
+            .unwrap()
+            .to_string();
+        assert!(
+            body.starts_with(":::forum-quote\n"),
+            "inner quote lost, got:\n{body}"
+        );
+        assert!(body.contains("reply"));
+    }
+
+    #[test]
+    fn test_other_asides_still_become_link_cards() {
+        let md = super::html_to_markdown(
+            r#"<aside class="onebox allowlistedgeneric" data-onebox-src="https://example.com"><header class="source"><a href="https://example.com">example.com</a></header><article class="onebox-body"><h3>Title</h3><p>Words</p></article></aside>"#,
+        );
+        assert!(md.starts_with(":::link-card\n"), "got:\n{md}");
     }
 }

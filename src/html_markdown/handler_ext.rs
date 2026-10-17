@@ -1,6 +1,10 @@
 use crate::html_markdown::light_box::LightBox;
 use crate::html_markdown::link_card::LinkCard;
-use crate::html_markdown::{collect_text, fence_for, find_first, find_first_with_class, get_attr, get_attr_u32, has_class, language_from_class};
+use crate::html_markdown::quote_card::QuoteCard;
+use crate::html_markdown::{
+    collect_text, fence_for, find_first, find_first_with_class, get_attr, get_attr_u32, has_class,
+    language_from_class,
+};
 use htmd::Element;
 use htmd::element_handler::{HandlerResult, Handlers};
 use markup5ever_rcdom::Node;
@@ -17,11 +21,9 @@ fn text_of(node: &Rc<Node>) -> String {
     text.split_whitespace().collect::<Vec<_>>().join(" ")
 }
 
-
 impl HTMLHandlerExt {
     pub fn forum_lang_tag(_handlers: &dyn Handlers, element: Element) -> Option<HandlerResult> {
-        let code_node =
-            find_first(element.node, "code").unwrap_or_else(|| element.node.clone());
+        let code_node = find_first(element.node, "code").unwrap_or_else(|| element.node.clone());
 
         let lang = language_from_class(&code_node);
 
@@ -50,12 +52,11 @@ impl HTMLHandlerExt {
         let src = src.replace('"', "\\\"");
         let alt = alt.replace('"', "\\\"");
 
+        let light_box_json =
+            serde_json::to_string(&LightBox::new(src.into(), alt.into(), width, height))
+                .unwrap_or_default();
 
-        let light_box_json = serde_json::to_string(&LightBox::new(src.into(), alt.into(), width, height)).unwrap_or_default();
-
-        let content = format!(
-            ":::forum-lightbox-wrapper\n{light_box_json}\n:::\n"
-        );
+        let content = format!(":::forum-lightbox-wrapper\n{light_box_json}\n:::\n");
         Some(HandlerResult::from(content))
     }
 
@@ -117,5 +118,40 @@ impl HTMLHandlerExt {
         let json = serde_json::to_string(&card).unwrap_or_default();
         let content = format!(":::link-card\n{json}\n:::\n");
         Some(HandlerResult::from(content))
+    }
+
+    /// A Discourse quote (`<aside class="quote">`): a title holding the quoted
+    /// user's avatar and name, then a `<blockquote>` with what they said.
+    pub fn quote(handlers: &dyn Handlers, element: Element) -> Option<HandlerResult> {
+        if !has_class(element.node, "quote") {
+            return handlers.fallback(element);
+        }
+
+        let username = get_attr(element.node, "data-username").unwrap_or_default();
+        let avatar_src = find_first_with_class(element.node, "img", "avatar")
+            .and_then(|img| get_attr(&img, "src"))
+            .unwrap_or_default();
+        // Convert the body through the same handlers, so a quote inside a quote
+        // (or an image, link card, ...) comes out as its own block.
+        let body = find_first(element.node, "blockquote")
+            .map(|node| handlers.walk_children(&node).content)
+            .unwrap_or_default();
+
+        let card = QuoteCard::new(username, &avatar_src, body.trim().to_string());
+        let json = serde_json::to_string(&card).unwrap_or_default();
+        Some(HandlerResult::from(format!(":::forum-quote\n{json}\n:::\n")))
+    }
+
+    pub fn filter_emoji(handlers: &dyn Handlers, element: Element) -> Option<HandlerResult> {
+        // Discourse emoji <img> elements are filtered out entirely: the Markdown
+        // viewer cannot render an image inline within a wrapped text run, so an
+        // inline emoji token would be laid out off-screen. Every other image
+        // (lightboxes, onebox thumbnails, inline uploads) falls through to the
+        // default `![alt](src)` rendering.
+        if has_class(element.node, "emoji") {
+            return None;
+        }
+
+        handlers.fallback(element)
     }
 }

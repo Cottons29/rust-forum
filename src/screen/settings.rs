@@ -2,9 +2,8 @@ use crate::components::page_title::PageTitle;
 use crate::components::theme_selector::ThemeSelector;
 use crate::theme::ForumTheme;
 use aimer::style::{LayoutSpacing, TextStyle, Theme};
-use aimer::{
-    BuildContext, Column, Container, FontWeight, SizedBox, StatelessWidget, Text, Widget,
-};
+use aimer::{BuildContext, Column, Container, FontWeight, SizedBox, StatelessWidget, Text, Widget};
+use aimer::share::ShareRef;
 
 /// A minimal settings screen. For now it hosts the theme selector that used to
 /// live at the top of the sidebar.
@@ -20,7 +19,7 @@ impl StatelessWidget for SettingsScreen {
             .padding(LayoutSpacing::all(24))
             .child(
                 Column::new().children([
-                    PageTitle::new("Settings".into())
+                    PageTitle::new(ShareRef::from_static("Settings"))
                         .padding(LayoutSpacing::new())
                         .boxed(),
                     SizedBox::new().height(24).boxed(),

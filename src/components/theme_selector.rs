@@ -2,15 +2,16 @@ use std::time::Duration;
 
 use crate::store::AppStore;
 use crate::theme::ForumTheme;
-use aimer::animation::{Curve, ImplicitAnimatedBuilder};
+use aimer::animation::{ImplicitAnimatedBuilder, curves};
 use aimer::style::{
     BorderSlice, BorderStyle, BoxBorder, BoxDecoration, LayoutSpacing, TextAlign, TextStyle, Theme,
     ThemeMode,
 };
 use aimer::{
-    AnyWidget, BuildContext, Button, Color, Container, Dimension, FontWeight, ProviderContext,
+    AnyWidget, BuildContext, Color, Container, Dimension, FontWeight, ProviderContext,
     ProviderHandle, Row, StatelessWidget, Text, Widget,
 };
+use aimer::input::button::Button;
 
 const BUTTON_WIDTH: f32 = 96.0;
 const BUTTON_HEIGHT: f32 = 40.0;
@@ -58,7 +59,7 @@ fn theme_button(
             ImplicitAnimatedBuilder::new(
                 if active { 1.0 } else { 0.0 },
                 TRANSITION_DURATION,
-                Curve::FastOutSlowIn,
+                curves::FAST_OUT_SLOW_IN,
                 move |progress| {
                     let progress = *progress;
                     let bg = inactive_bg.lerp(active_bg, progress);

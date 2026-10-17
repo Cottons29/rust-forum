@@ -142,6 +142,15 @@ pub struct PostStream {
     pub stream: Vec<i64>,
 }
 
+/// The response of `t/{id}/posts.json`, which returns a chosen set of a
+/// topic's posts. The topic document itself only carries the first batch.
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(default)]
+pub struct PostsPage {
+    #[serde(rename = "post_stream")]
+    pub post_stream: PostStream,
+}
+
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(default)]
 #[serde(rename_all = "camelCase")]
@@ -259,6 +268,14 @@ pub struct Post {
     pub user_birthdate: Option<String>,
     #[serde(rename = "action_code")]
     pub action_code: Option<String>,
+}
+
+impl Post {
+    /// The `post_number` this post replies to, or `None` for a post that
+    /// replies to the topic itself (Discourse sends `null`).
+    pub fn reply_to(&self) -> Option<i64> {
+        self.reply_to_post_number.as_i64()
+    }
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -516,6 +533,7 @@ pub struct LastPoster {
 #[serde(rename_all = "camelCase")]
 pub struct Link {
     pub url: String,
+    #[serde(default, deserialize_with = "null_to_default")]
     pub title: String,
     pub internal: bool,
     pub attachment: bool,
@@ -526,4 +544,38 @@ pub struct Link {
     pub domain: String,
     #[serde(rename = "root_domain")]
     pub root_domain: String,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::PostRoot;
+
+    #[test]
+    fn accepts_null_link_titles() {
+        let post: PostRoot = serde_json::from_value(serde_json::json!({
+            "details": {
+                "links": [{
+                    "url": "https://dcd.gg/4dplus",
+                    "title": null
+                }]
+            }
+        }))
+        .expect("null link titles should deserialize");
+
+        assert_eq!(post.details.links[0].title, "");
+    }
+
+    #[test]
+    fn posts_page_reads_reply_targets() {
+        let page: super::PostsPage = serde_json::from_value(serde_json::json!({
+            "post_stream": { "posts": [
+                { "id": 1, "post_number": 7, "reply_to_post_number": null, "post_type": 1 },
+                { "id": 2, "post_number": 8, "reply_to_post_number": 7, "post_type": 1 }
+            ] }
+        }))
+        .expect("a posts page should deserialize");
+
+        let replies: Vec<_> = page.post_stream.posts.iter().map(|post| post.reply_to()).collect();
+        assert_eq!(replies, [None, Some(7)]);
+    }
 }
